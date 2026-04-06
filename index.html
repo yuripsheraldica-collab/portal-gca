@@ -313,7 +313,9 @@ button, input, select, textarea {
   font-size: 15px; font-weight: 900; flex-shrink: 0;
   letter-spacing: -.5px; border: 2px solid rgba(255,255,255,.2);
   box-shadow: 0 2px 8px rgba(0,0,0,.2);
+  overflow: hidden; padding: 4px;
 }
+.ca-banic img { width: 100%; height: 100%; object-fit: contain; border-radius: 6px; }
 .ca-ban-mid { flex: 1; min-width: 0; }
 .ca-banlbl { font-size: 9px; color: rgba(255,255,255,.45); text-transform: uppercase; letter-spacing: .9px; margin-bottom: 2px; }
 .ca-banname { font-size: 13px; font-weight: 800; color: #fff; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
@@ -421,7 +423,9 @@ select:focus { border-color: var(--blue2); }
 .ca-banic {
   width: 38px; height: 38px; background: rgba(255,255,255,.12);
   border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+  overflow: hidden; padding: 4px;
 }
+.ca-banic img { width: 100%; height: 100%; object-fit: contain; border-radius: 6px; }
 .ca-banlbl { font-size: 9px; color: rgba(255,255,255,.45); text-transform: uppercase; letter-spacing: .9px; margin-bottom: 2px; }
 .ca-banname { font-size: 14px; font-weight: 800; color: #fff; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .ca-bancnpj { font-size: 10px; color: rgba(255,255,255,.45); }
@@ -1187,9 +1191,9 @@ var CA_SHA=(function(){var K=[0x428a2f98,0x71374491,0xb5c0fbcf,0xe9b5dba5,0x3956
    USER DATABASE
 ═══════════════════════════════════════════════ */
 var CA_DB=[
-  {login:"60945854000172",h:"1f594da9b409f7f4b9dc5015a81761b2fc2dd60eec773f74539bdfd30c552c89",perfil:'CLIENTE',cnpj:"60945854000172",nome:"INSTITUTO DO CANCER ARNALDO VIEIRA DE CARVALHO",cnpj_fmt:"60.945.854/0001-72",consultor:"Valter Rotter",whatsapp:'5511999999999',logo_initials:"IC",logo_color:"#1B5E9E",logo_bg:"#E3EEF9"},
-  {login:"11636872000167",h:"e5b861a6d8a966dfca7e7341cd3eb6be9901688d547a72ebed0b1f5e14f3d08d",perfil:'CLIENTE',cnpj:"11636872000167",nome:"FUND. HOSP. REGIONAL DO CANCER DA SANTA CASA DE MISERICORDIA DE PRESIDENTE PRUDENTE",cnpj_fmt:"11.636.872/0001-67",consultor:"Valter Rotter",whatsapp:'5511999999999',logo_initials:"SC",logo_color:"#7B1D1D",logo_bg:"#FCE8E8"},
-  {login:"6870026000177",h:"c2077253a9b10166e7c8ffda8f2377456f332029eea3d27def7fb2b23502c0d4",perfil:'CLIENTE',cnpj:"6870026000177",nome:"ASSOCIACAO PIAUIENSE DE COMBATE AO CANCER ALCENOR ALMEIDA",cnpj_fmt:"06.870.026/0001-77",consultor:"Valter Rotter",whatsapp:'5511999999999',logo_initials:"AP",logo_color:"#1A5C2E",logo_bg:"#E4F5E9"},
+  {login:"60945854000172",h:"1f594da9b409f7f4b9dc5015a81761b2fc2dd60eec773f74539bdfd30c552c89",perfil:'CLIENTE',cnpj:"60945854000172",nome:"INSTITUTO DO CANCER ARNALDO VIEIRA DE CARVALHO",cnpj_fmt:"60.945.854/0001-72",consultor:"Valter Rotter",whatsapp:'5511999999999',logo_initials:"IC",logo_color:"#1B5E9E",logo_bg:"#E3EEF9",logo_url:"https://doutorarnaldo.org/wp-content/themes/doutorarnaldo/images/dr-arnaldo.svg"},
+  {login:"11636872000167",h:"e5b861a6d8a966dfca7e7341cd3eb6be9901688d547a72ebed0b1f5e14f3d08d",perfil:'CLIENTE',cnpj:"11636872000167",nome:"FUND. HOSP. REGIONAL DO CANCER DA SANTA CASA DE MISERICORDIA DE PRESIDENTE PRUDENTE",cnpj_fmt:"11.636.872/0001-67",consultor:"Valter Rotter",whatsapp:'5511999999999',logo_initials:"SC",logo_color:"#7B1D1D",logo_bg:"#FCE8E8",logo_url:"https://hospitaldeesperanca.org.br/wp-content/themes/volca/images/logo.webp"},
+  {login:"6870026000177",h:"c2077253a9b10166e7c8ffda8f2377456f332029eea3d27def7fb2b23502c0d4",perfil:'CLIENTE',cnpj:"6870026000177",nome:"ASSOCIACAO PIAUIENSE DE COMBATE AO CANCER ALCENOR ALMEIDA",cnpj_fmt:"06.870.026/0001-77",consultor:"Valter Rotter",whatsapp:'5511999999999',logo_initials:"AP",logo_color:"#1A5C2E",logo_bg:"#E4F5E9",logo_url:"https://www.saomarcos.org.br/themes/dx_saomarcos/_cdn/_front/_assets/_img/header-logo.png"},
   {login:"valter",h:"58ea4682d08434990f1e407b1c37411662b813553dcf38b0f2f128f4eea5b284",perfil:'CONSULTOR',cnpj:null,nome:"Valter Rotter",cnpj_fmt:null,consultor:null,whatsapp:'5511999999999',logo_initials:'GCA',logo_color:'#1B3A6B',logo_bg:'#E3EEF9'},
   {login:"carla",h:"58ea4682d08434990f1e407b1c37411662b813553dcf38b0f2f128f4eea5b284",perfil:'CONSULTOR',cnpj:null,nome:"Carla Souza",cnpj_fmt:null,consultor:null,whatsapp:'5511999999999',logo_initials:'GCA',logo_color:'#1B3A6B',logo_bg:'#E3EEF9'},
   {login:"admin",h:"58ea4682d08434990f1e407b1c37411662b813553dcf38b0f2f128f4eea5b284",perfil:'CONSULTOR',cnpj:null,nome:"Administrador",cnpj_fmt:null,consultor:null,whatsapp:'5511999999999',logo_initials:'GCA',logo_color:'#1B3A6B',logo_bg:'#E3EEF9'}
@@ -1343,12 +1347,20 @@ function initDash(){
   // Set entity logo in banner
   var banLogo=el('ca-ban-logo');
   if(banLogo){
-    var li=CA_SES.logo_initials||ini;
-    var lc=CA_SES.logo_color||'#1B3A6B';
-    var lb=CA_SES.logo_bg||'rgba(255,255,255,.15)';
-    banLogo.textContent=li;
-    banLogo.style.background=lb;
-    banLogo.style.color=lc;
+    if(CA_SES.logo_url){
+      // Real logo from entity website — browser loads client-side
+      var li=CA_SES.logo_initials||ini;
+      var lb=CA_SES.logo_bg||'rgba(255,255,255,.15)';
+      banLogo.style.background=lb;
+      banLogo.innerHTML='<img src="'+CA_SES.logo_url+'" alt="'+li+'" style="width:100%;height:100%;object-fit:contain;border-radius:6px;" onerror="this.parentElement.innerHTML=\''+li+'\';this.parentElement.style.color=\''+(CA_SES.logo_color||'#1B3A6B')+'\';this.parentElement.style.fontSize=\'15px\';this.parentElement.style.fontWeight=\'900\';">';
+    } else {
+      var li=CA_SES.logo_initials||ini;
+      var lc=CA_SES.logo_color||'#1B3A6B';
+      var lb=CA_SES.logo_bg||'rgba(255,255,255,.15)';
+      banLogo.textContent=li;
+      banLogo.style.background=lb;
+      banLogo.style.color=lc;
+    }
   }
   setText('ca-bname',CA_SES.nome);
   setText('ca-um-name',CA_SES.nome);
