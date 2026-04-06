@@ -297,7 +297,7 @@ button, input, select, textarea {
 .ca-banner {
   background: linear-gradient(135deg,#1B3A6B 0%,#1E4D8C 55%,#2A5FA8 100%);
   border-radius: var(--radius); margin-bottom: 12px;
-  box-shadow: 0 4px 20px rgba(27,58,107,.35); overflow: visible;
+  box-shadow: 0 4px 20px rgba(27,58,107,.35);
   position: relative;
 }
 .ca-banner-top {
@@ -325,20 +325,18 @@ button, input, select, textarea {
 .ca-bantag.ca-cons { background: rgba(200,151,43,.2); border-color: rgba(200,151,43,.35); color: #F6D070; }
 .ca-ban-chevron { width: 20px; height: 20px; color: rgba(255,255,255,.55); transition: transform .25s; flex-shrink: 0; }
 .ca-banner.ca-open .ca-ban-chevron { transform: rotate(180deg); }
-/* Menu expansível — abre ABAIXO do banner, como dropdown */
+/* Menu expansível — inline, empurra o conteúdo abaixo */
 .ca-banner-menu {
-  position: absolute; top: calc(100% + 8px); left: 0; right: 0;
-  background: var(--card); border-radius: var(--radius);
-  border: 1px solid var(--border);
-  box-shadow: 0 8px 32px rgba(0,0,0,.18);
-  z-index: 300;
+  position: static;
+  background: var(--card); border-radius: 0 0 var(--radius) var(--radius);
+  border-top: 1px solid var(--border);
   overflow: hidden;
   max-height: 0; opacity: 0;
-  transition: max-height .25s ease, opacity .2s ease;
+  transition: max-height .28s ease, opacity .2s ease;
   pointer-events: none;
 }
 .ca-banner.ca-open .ca-banner-menu {
-  max-height: 280px; opacity: 1; pointer-events: all;
+  max-height: 320px; opacity: 1; pointer-events: all;
 }
 .ca-bm-item {
   display: flex; align-items: center; gap: 12px;
