@@ -1188,306 +1188,11 @@ var CA_SHA=(function(){var K=[0x428a2f98,0x71374491,0xb5c0fbcf,0xe9b5dba5,0x3956
 /* ═══════════════════════════════════════════════
    USER DATABASE
 ═══════════════════════════════════════════════ */
-var CA_DB = [
-  {"login": "60945854000172", "h": "1f594da9b409f7f4b9dc5015a81761b2fc2dd60eec773f74539bdfd30c552c89", "perfil": "CLIENTE", "cnpj": "60945854000172", "nome": "INSTITUTO DO CANCER ARNALDO VIEIRA DE CARVALHO", "cnpj_fmt": "60.945.854/0001-72", "consultor": "Valter Rotter", "whatsapp": "5511999999999", "logo_initials": "IC", "logo_color": "#1B5E9E", "logo_bg": "#E3EEF9", "logo_url": "https://doutorarnaldo.org/wp-content/themes/doutorarnaldo/images/dr-arnaldo.svg"},
-  {"login": "11636872000167", "h": "e5b861a6d8a966dfca7e7341cd3eb6be9901688d547a72ebed0b1f5e14f3d08d", "perfil": "CLIENTE", "cnpj": "11636872000167", "nome": "FUND. HOSP. REGIONAL DO CANCER DA SANTA CASA DE MISERICORDIA DE PRESIDENTE PRUDENTE", "cnpj_fmt": "11.636.872/0001-67", "consultor": "Valter Rotter", "whatsapp": "5511999999999", "logo_initials": "SC", "logo_color": "#7B1D1D", "logo_bg": "#FCE8E8", "logo_url": "https://hospitaldeesperanca.org.br/wp-content/themes/volca/images/logo.webp"},
-  {"login": "06870026000177", "h": "28a14b90b4cb23b99703a8bea49b62ca620f889616241bdae7f6f1ec034d81e6", "perfil": "CLIENTE", "cnpj": "06870026000177", "nome": "ASSOCIACAO PIAUIENSE DE COMBATE AO CANCER ALCENOR ALMEIDA", "cnpj_fmt": "06.870.026/0001-77", "consultor": "Valter Rotter", "whatsapp": "5511999999999", "logo_initials": "AP", "logo_color": "#1B3A6B", "logo_bg": "#E3EEF9", "logo_url": ""},
-  {"login": "54370630000187", "h": "18beb4813723e788a1d79bcbf80802538ec813aa19ded2e9c21cbf08bed6bee3", "perfil": "CLIENTE", "cnpj": "54370630000187", "nome": "IRMANDADE DA SANTA CASA DE MISERICORDIA DE PIRACICABA", "cnpj_fmt": "54.370.630/0001-87", "consultor": "Valter Rotter", "whatsapp": "5511999999999", "logo_initials": "ID", "logo_color": "#1B3A6B", "logo_bg": "#E3EEF9", "logo_url": ""},
-  {"login": "51425106000178", "h": "b027feeb60b70f0d34ece10aead660113cf06408da4c6477c7b2606839475de4", "perfil": "CLIENTE", "cnpj": "51425106000178", "nome": "ASSOCIACAO BENEFICENTE HOSPITAL NOSSA SENHORA DA PIEDADE", "cnpj_fmt": "51.425.106/0001-78", "consultor": "Valter Rotter", "whatsapp": "5511999999999", "logo_initials": "AB", "logo_color": "#1B3A6B", "logo_bg": "#E3EEF9", "logo_url": ""},
-  {"login": "43987668000187", "h": "050a010ce24d0896056e9a36a1940738d38f469d644b3682cfcc47569739c525", "perfil": "CLIENTE", "cnpj": "43987668000187", "nome": "ASSOCIACAO BENEFICENTE JESUS JOSE E MARIA", "cnpj_fmt": "43.987.668/0001-87", "consultor": "Diego Dias", "whatsapp": "5511999999999", "logo_initials": "AB", "logo_color": "#1B3A6B", "logo_bg": "#E3EEF9", "logo_url": ""},
-  {"login": "46886149000110", "h": "1e5ee5e58c8f490ae68e7e91b1575ebefc2bf6c211f302a553ff0c4925e85321", "perfil": "CLIENTE", "cnpj": "46886149000110", "nome": "ASSOCIACAO BENEFICENTE SANTA CASA DE MISERICORDIA DE CAPAO BONITO", "cnpj_fmt": "46.886.149/0001-10", "consultor": "Valter Rotter", "whatsapp": "5511999999999", "logo_initials": "AB", "logo_color": "#1B3A6B", "logo_bg": "#E3EEF9", "logo_url": ""},
-  {"login": "55856710000100", "h": "dd8e8c8c9dae8978f122d7bcf3d0d49f6a0e86b9fc35528f55e78f7408927bb1", "perfil": "CLIENTE", "cnpj": "55856710000100", "nome": "ASSOCIACAO DE PROTECAO E ASSISTENCIA A MATERNIDADE E A INFANCIA DE REGISTRO - APAMIR", "cnpj_fmt": "55.856.710/0001-00", "consultor": "Diego Dias", "whatsapp": "5511999999999", "logo_initials": "AD", "logo_color": "#1B3A6B", "logo_bg": "#E3EEF9", "logo_url": ""},
-  {"login": "89428734002204", "h": "eaa1938017b2d55e02387d0837e1b56bc124ae8a17624e10e366bae6c4b9c834", "perfil": "CLIENTE", "cnpj": "89428734002204", "nome": "ASSOCIACAO EDUCACIONAL E CARITATIVA", "cnpj_fmt": "89.428.734/0022-04", "consultor": "Diego Dias", "whatsapp": "5511999999999", "logo_initials": "AE", "logo_color": "#1B3A6B", "logo_bg": "#E3EEF9", "logo_url": ""},
-  {"login": "50795566000206", "h": "a435270b90e9b7091c77f478df0b8f78dddd32079b75698b8de902061f74efaf", "perfil": "CLIENTE", "cnpj": "50795566000206", "nome": "BANCO DE OLHOS DE SOROCABA", "cnpj_fmt": "50.795.566/0002-06", "consultor": "Valter Rotter", "whatsapp": "5511999999999", "logo_initials": "BD", "logo_color": "#1B3A6B", "logo_bg": "#E3EEF9", "logo_url": ""},
-  {"login": "50795566000125", "h": "a435270b90e9b7091c77f478df0b8f78dddd32079b75698b8de902061f74efaf", "perfil": "CLIENTE", "cnpj": "50795566000125", "nome": "BANCO DE OLHOS DE SOROCABA", "cnpj_fmt": "50.795.566/0001-25", "consultor": "Diego Dias", "whatsapp": "5511999999999", "logo_initials": "BD", "logo_color": "#1B3A6B", "logo_bg": "#E3EEF9", "logo_url": ""},
-  {"login": "50351626000110", "h": "7182dd431b5c8833ed3c8a02c8615780df8dca7d83ed4166962b207f45a656b5", "perfil": "CLIENTE", "cnpj": "50351626000110", "nome": "BENEFICENCIA HOSPITALAR DE CESARIO LANGE", "cnpj_fmt": "50.351.626/0001-10", "consultor": "Valter Rotter", "whatsapp": "5511999999999", "logo_initials": "BH", "logo_color": "#1B3A6B", "logo_bg": "#E3EEF9", "logo_url": ""},
-  {"login": "62220637000140", "h": "fc47b34e36f4032acd1ca2192a7b9b097011ccbfe3d8e27b04bb6999e000578d", "perfil": "CLIENTE", "cnpj": "62220637000140", "nome": "CENTRO ESPIRITA NOSSO LAR CASAS ANDRE LUIZ", "cnpj_fmt": "62.220.637/0001-40", "consultor": "Diego Dias", "whatsapp": "5511999999999", "logo_initials": "CE", "logo_color": "#1B3A6B", "logo_bg": "#E3EEF9", "logo_url": ""},
-  {"login": "62220637000302", "h": "fc47b34e36f4032acd1ca2192a7b9b097011ccbfe3d8e27b04bb6999e000578d", "perfil": "CLIENTE", "cnpj": "62220637000302", "nome": "CENTRO ESPIRITA NOSSO LAR CASAS ANDRE LUIZ", "cnpj_fmt": "62.220.637/0003-02", "consultor": "Diego Dias", "whatsapp": "5511999999999", "logo_initials": "CE", "logo_color": "#1B3A6B", "logo_bg": "#E3EEF9", "logo_url": ""},
-  {"login": "29640612000120", "h": "a0f8b2c4cb1ac82abdb37f0fe5203b97be556c4468c83bba18684d620fd8eaf9", "perfil": "CLIENTE", "cnpj": "29640612000120", "nome": "CONFERENCIA SAO JOSE DO AVAI", "cnpj_fmt": "29.640.612/0001-20", "consultor": "Diego Dias", "whatsapp": "5511999999999", "logo_initials": "CS", "logo_color": "#1B3A6B", "logo_bg": "#E3EEF9", "logo_url": ""},
-  {"login": "49052533000106", "h": "cbd02d97b0731d88c78d30c20d90492b2d4c3f2f983931c38fef2dedc7ce48d4", "perfil": "CLIENTE", "cnpj": "49052533000106", "nome": "CONGREGACAO DAS FILHAS DE NOSSA SENHORA STELLA MARIS", "cnpj_fmt": "49.052.533/0001-06", "consultor": "Diego Dias", "whatsapp": "5511999999999", "logo_initials": "CD", "logo_color": "#1B3A6B", "logo_bg": "#E3EEF9", "logo_url": ""},
-  {"login": "16413080000147", "h": "3f9807cb9ae9fb6c30942af6139909d27753a5e03fe5a5c6e93b014f5b17366f", "perfil": "CLIENTE", "cnpj": "16413080000147", "nome": "FUNDACAO AURELINA VIRGILIA FAIR", "cnpj_fmt": "16.413.080/0001-47", "consultor": "Diego Dias", "whatsapp": "5511999999999", "logo_initials": "FA", "logo_color": "#1B3A6B", "logo_bg": "#E3EEF9", "logo_url": ""},
-  {"login": "49914773000172", "h": "db3defda18fafc0c197740438051c690d98b551a7e449d66390d38fa2db09b77", "perfil": "CLIENTE", "cnpj": "49914773000172", "nome": "FUNDACAO ESPIRITA AMERICO BAIRRAL", "cnpj_fmt": "49.914.773/0001-72", "consultor": "Diego Dias", "whatsapp": "5511999999999", "logo_initials": "FE", "logo_color": "#1B3A6B", "logo_bg": "#E3EEF9", "logo_url": ""},
-  {"login": "16865909000142", "h": "80c3cd40fa35f9088b8741bd8be6153de05f661cfeeb4625ffbf5f4a6c3c02c4", "perfil": "CLIENTE", "cnpj": "16865909000142", "nome": "FUNDACAO HOSPITALAR AURELIANO DE CAMPOS BRANDAO", "cnpj_fmt": "16.865.909/0001-42", "consultor": "Diego Dias", "whatsapp": "5511999999999", "logo_initials": "FH", "logo_color": "#1B3A6B", "logo_bg": "#E3EEF9", "logo_url": ""},
-  {"login": "47074851000908", "h": "30eec89ddd9c342ef28a87f731d6e50ba977baf12d7caa7045a9d56b0e923f03", "perfil": "CLIENTE", "cnpj": "47074851000908", "nome": "FUNDACAO PADRE ALBINO - HOSPITAL EMILIO CARLOS", "cnpj_fmt": "47.074.851/0009-08", "consultor": "Valter Rotter", "whatsapp": "5511999999999", "logo_initials": "FP", "logo_color": "#1B3A6B", "logo_bg": "#E3EEF9", "logo_url": ""},
-  {"login": "47074851000819", "h": "30eec89ddd9c342ef28a87f731d6e50ba977baf12d7caa7045a9d56b0e923f03", "perfil": "CLIENTE", "cnpj": "47074851000819", "nome": "FUNDACAO PADRE ALBINO - HOSPITAL PADRE ALBINO", "cnpj_fmt": "47.074.851/0008-19", "consultor": "Diego Dias", "whatsapp": "5511999999999", "logo_initials": "FP", "logo_color": "#1B3A6B", "logo_bg": "#E3EEF9", "logo_url": ""},
-  {"login": "47074851000142", "h": "30eec89ddd9c342ef28a87f731d6e50ba977baf12d7caa7045a9d56b0e923f03", "perfil": "CLIENTE", "cnpj": "47074851000142", "nome": "FUNDACAO PADRE ALBINO - MANTENEDORA", "cnpj_fmt": "47.074.851/0001-42", "consultor": "Valter Rotter", "whatsapp": "5511999999999", "logo_initials": "FP", "logo_color": "#1B3A6B", "logo_bg": "#E3EEF9", "logo_url": ""},
-  {"login": "05877609000167", "h": "18873905ac1540b70c720b7289d232e8135eb640597a5f5f0c904077b2bc24f0", "perfil": "CLIENTE", "cnpj": "05877609000167", "nome": "HOSPITAL BENEFICENTE SANTA HELENA", "cnpj_fmt": "05.877.609/0001-67", "consultor": "Diego Dias", "whatsapp": "5511999999999", "logo_initials": "HB", "logo_color": "#1B3A6B", "logo_bg": "#E3EEF9", "logo_url": ""},
-  {"login": "60992427002270", "h": "1f594da9b409f7f4b9dc5015a81761b2fc2dd60eec773f74539bdfd30c552c89", "perfil": "CLIENTE", "cnpj": "60992427002270", "nome": "HOSPITAL DE ITAPETININGA DR LEO ORSI BERNARDES - HLOB", "cnpj_fmt": "60.992.427/0022-70", "consultor": "Diego Dias", "whatsapp": "5511999999999", "logo_initials": "HD", "logo_color": "#1B3A6B", "logo_bg": "#E3EEF9", "logo_url": ""},
-  {"login": "54384631000261", "h": "18beb4813723e788a1d79bcbf80802538ec813aa19ded2e9c21cbf08bed6bee3", "perfil": "CLIENTE", "cnpj": "54384631000261", "nome": "HOSPITAL DOS FORNECEDORES DE CANA DE PIRACICABA", "cnpj_fmt": "54.384.631/0002-61", "consultor": "Diego Dias", "whatsapp": "5511999999999", "logo_initials": "HD", "logo_color": "#1B3A6B", "logo_bg": "#E3EEF9", "logo_url": ""},
-  {"login": "45484383000159", "h": "48f89b630677c2cbb70e2ba05bf7a3633294e368a45bdc2c7df9d832f9e0c941", "perfil": "CLIENTE", "cnpj": "45484383000159", "nome": "HOSPITAL SAO LUIZ DE BOITUVA", "cnpj_fmt": "45.484.383/0001-59", "consultor": "Diego Dias", "whatsapp": "5511999999999", "logo_initials": "HS", "logo_color": "#1B3A6B", "logo_bg": "#E3EEF9", "logo_url": ""},
-  {"login": "60992427001893", "h": "1f594da9b409f7f4b9dc5015a81761b2fc2dd60eec773f74539bdfd30c552c89", "perfil": "CLIENTE", "cnpj": "60992427001893", "nome": "HOSPITAL SAO MIGUEL ARCANJO", "cnpj_fmt": "60.992.427/0018-93", "consultor": "Valter Rotter", "whatsapp": "5511999999999", "logo_initials": "HS", "logo_color": "#1B3A6B", "logo_bg": "#E3EEF9", "logo_url": ""},
-  {"login": "60945854000173", "h": "1f594da9b409f7f4b9dc5015a81761b2fc2dd60eec773f74539bdfd30c552c89", "perfil": "CLIENTE", "cnpj": "60945854000173", "nome": "INSTITUTO DO CANCER ARNALDO VIEIRA DE CARVALHO", "cnpj_fmt": "60.945.854/0001-73", "consultor": "Valter Rotter", "whatsapp": "5511999999999", "logo_initials": "ID", "logo_color": "#1B3A6B", "logo_bg": "#E3EEF9", "logo_url": ""},
-  {"login": "44563716000172", "h": "0e12831a7047f759733b21f028525039607350b1b1b4fe904595427e72ea0d9b", "perfil": "CLIENTE", "cnpj": "44563716000172", "nome": "INSTITUTO NACIONAL DE PESQUISA E GESTAO EM SAUDE - INSAUDE", "cnpj_fmt": "44.563.716/0001-72", "consultor": "Valter Rotter", "whatsapp": "5511999999999", "logo_initials": "IN", "logo_color": "#1B3A6B", "logo_bg": "#E3EEF9", "logo_url": ""},
-  {"login": "25333751000150", "h": "e7866fdc6672f827c76f6124ca3eeaff44aff8b7caf4ee1469b2ab887e7e7875", "perfil": "CLIENTE", "cnpj": "25333751000150", "nome": "INSTITUTO VISAO DO BEM", "cnpj_fmt": "25.333.751/0001-50", "consultor": "Valter Rotter", "whatsapp": "5511999999999", "logo_initials": "IV", "logo_color": "#1B3A6B", "logo_bg": "#E3EEF9", "logo_url": ""},
-  {"login": "45615309000124", "h": "b3a8e0e1f9ab1bfe3a36f231f676f78bb30a519d2b21e6c530c0eee8ebb4a5d0", "perfil": "CLIENTE", "cnpj": "45615309000124", "nome": "IRM DO SR BOM JESUS DOS PASSOS DA STA CASA MIS BRG PTA", "cnpj_fmt": "45.615.309/0001-24", "consultor": "Valter Rotter", "whatsapp": "5511999999999", "logo_initials": "ID", "logo_color": "#1B3A6B", "logo_bg": "#E3EEF9", "logo_url": ""},
-  {"login": "07273592000164", "h": "bc7d001b725557c76b0557936003c32bd3f2fc49f60fb9a29aaa342d25fdce4d", "perfil": "CLIENTE", "cnpj": "07273592000164", "nome": "IRMANDADE BENEF DA SANTA CASA DA MISERICORDIA DE FORT", "cnpj_fmt": "07.273.592/0001-64", "consultor": "Valter Rotter", "whatsapp": "5511999999999", "logo_initials": "IB", "logo_color": "#1B3A6B", "logo_bg": "#E3EEF9", "logo_url": ""},
-  {"login": "43964931000112", "h": "050a010ce24d0896056e9a36a1940738d38f469d644b3682cfcc47569739c525", "perfil": "CLIENTE", "cnpj": "43964931000112", "nome": "IRMANDADE DA SANTA CASA DE MISERICORDIA DE ARARAQUARA", "cnpj_fmt": "43.964.931/0001-12", "consultor": "Diego Dias", "whatsapp": "5511999999999", "logo_initials": "ID", "logo_color": "#1B3A6B", "logo_bg": "#E3EEF9", "logo_url": ""},
-  {"login": "48662167000144", "h": "86b700fab5db37977a73700b53a0654b21bdad0896914cc19ad70dee5f5fb3f6", "perfil": "CLIENTE", "cnpj": "48662167000144", "nome": "IRMANDADE DA SANTA CASA DE MISERICORDIA DE GUARIBA", "cnpj_fmt": "48.662.167/0001-44", "consultor": "Diego Dias", "whatsapp": "5511999999999", "logo_initials": "ID", "logo_color": "#1B3A6B", "logo_bg": "#E3EEF9", "logo_url": ""},
-  {"login": "52739950000136", "h": "e1bb74a7794720edf4935a8813538e8113491318168b1fa61a0ac3528e7b0440", "perfil": "CLIENTE", "cnpj": "52739950000136", "nome": "IRMANDADE DA SANTA CASA DE MISERICORDIA DE MOGI GUACU", "cnpj_fmt": "52.739.950/0001-36", "consultor": "Valter Rotter", "whatsapp": "5511999999999", "logo_initials": "ID", "logo_color": "#1B3A6B", "logo_bg": "#E3EEF9", "logo_url": ""},
-  {"login": "56384183000140", "h": "fa4ddf29f41b575377ce14a7900d1e26b669163ca53b80ea3168c6801cf7e114", "perfil": "CLIENTE", "cnpj": "56384183000140", "nome": "IRMANDADE DA SANTA CASA DE MISERICORDIA DE RIO CLARO", "cnpj_fmt": "56.384.183/0001-40", "consultor": "Valter Rotter", "whatsapp": "5511999999999", "logo_initials": "ID", "logo_color": "#1B3A6B", "logo_bg": "#E3EEF9", "logo_url": ""},
-  {"login": "60332673000170", "h": "97468f679ad305fa4dbbf17fd4bf18c41fb655f2d86162b1d91ad4f1e09814c1", "perfil": "CLIENTE", "cnpj": "60332673000170", "nome": "IRMANDADE DA SANTA CASA DE MISERICORDIA SAO VICENTE DE PAULO", "cnpj_fmt": "60.332.673/0001-70", "consultor": "Valter Rotter", "whatsapp": "5511999999999", "logo_initials": "ID", "logo_color": "#1B3A6B", "logo_bg": "#E3EEF9", "logo_url": ""},
-  {"login": "55189930000127", "h": "1f09802c4beac758321ae8a9f94d752b0976c7d54baa6e511bba8a7374107bef", "perfil": "CLIENTE", "cnpj": "55189930000127", "nome": "IRMANDADE DE MISERICORDIA DE PORTO FERREIRA", "cnpj_fmt": "55.189.930/0001-27", "consultor": "Valter Rotter", "whatsapp": "5511999999999", "logo_initials": "ID", "logo_color": "#1B3A6B", "logo_bg": "#E3EEF9", "logo_url": ""},
-  {"login": "19446590000109", "h": "7559ca4a957c8c82ba04781cd66a68d6022229fca0e8e88d8e487c96ee4446d0", "perfil": "CLIENTE", "cnpj": "19446590000109", "nome": "SANTA CASA DE MISERICORDIA DE CARMO DO PARANAIBA DR. ADILON CARDOSO TEIXEIRA", "cnpj_fmt": "19.446.590/0001-09", "consultor": "Diego Dias", "whatsapp": "5511999999999", "logo_initials": "SC", "logo_color": "#1B3A6B", "logo_bg": "#E3EEF9", "logo_url": ""},
-  {"login": "47235130000177", "h": "b6cb293891dd62748d85aa2e00eb97e267870905edefdfe53a2ea0f3da49e88d", "perfil": "CLIENTE", "cnpj": "47235130000177", "nome": "SANTA CASA DE MISERICORDIA DE CERQUEIRA CESAR", "cnpj_fmt": "47.235.130/0001-77", "consultor": "Valter Rotter", "whatsapp": "5511999999999", "logo_initials": "SC", "logo_color": "#1B3A6B", "logo_bg": "#E3EEF9", "logo_url": ""},
-  {"login": "73027690000146", "h": "61182f39851829ca78c919a83ecbfa045fc0686bff16d0cfa3e643988d9dfecd", "perfil": "CLIENTE", "cnpj": "73027690000146", "nome": "SANTA CASA DE MISERICORDIA DE CHAVANTES", "cnpj_fmt": "73.027.690/0001-46", "consultor": "Valter Rotter", "whatsapp": "5511999999999", "logo_initials": "SC", "logo_color": "#1B3A6B", "logo_bg": "#E3EEF9", "logo_url": ""},
-  {"login": "54022967000101", "h": "84f01dd97c687fb28a296bcc2ef1801446ea7405860595924eb2b5bb634718d1", "perfil": "CLIENTE", "cnpj": "54022967000101", "nome": "SANTA CASA DE MISERICORDIA DE PIEDADE", "cnpj_fmt": "54.022.967/0001-01", "consultor": "Valter Rotter", "whatsapp": "5511999999999", "logo_initials": "SC", "logo_color": "#1B3A6B", "logo_bg": "#E3EEF9", "logo_url": ""},
-  {"login": "55344337000108", "h": "d40fbd13d527595c47eacbf0d7c87d256139d9d45261c25c2840d30a4756495b", "perfil": "CLIENTE", "cnpj": "55344337000108", "nome": "SANTA CASA DE MISERICORDIA DE PRESIDENTE PRUDENTE", "cnpj_fmt": "55.344.337/0001-08", "consultor": "Valter Rotter", "whatsapp": "5511999999999", "logo_initials": "SC", "logo_color": "#1B3A6B", "logo_bg": "#E3EEF9", "logo_url": ""},
-  {"login": "56725385000109", "h": "97a6d21df7c51e8289ac1a8c026aaac143e15aa1957f54f42e30d8f8a85c3a55", "perfil": "CLIENTE", "cnpj": "56725385000109", "nome": "SANTA CASA DE MISERICORDIA DE SANTA BARBARA DO OESTE", "cnpj_fmt": "56.725.385/0001-09", "consultor": "Valter Rotter", "whatsapp": "5511999999999", "logo_initials": "SC", "logo_color": "#1B3A6B", "logo_bg": "#E3EEF9", "logo_url": ""},
-  {"login": "07818313000796", "h": "5e7f2276a9a8269fc61a6b9675b11a4b6d69c0b4c68c09c33604435b9bb5efa4", "perfil": "CLIENTE", "cnpj": "07818313000796", "nome": "SANTA CASA DE MISERICORDIA DE SOBRAL", "cnpj_fmt": "07.818.313/0007-96", "consultor": "Diego Dias", "whatsapp": "5511999999999", "logo_initials": "SC", "logo_color": "#1B3A6B", "logo_bg": "#E3EEF9", "logo_url": ""},
-  {"login": "72457716000123", "h": "68c6c6e9ad314d1a5c4d647cfb6ed84265e47cbc2a05a54fb58ae74c0085ef29", "perfil": "CLIENTE", "cnpj": "72457716000123", "nome": "SANTA CASA DE MISERICORDIA DE TIETE", "cnpj_fmt": "72.457.716/0001-23", "consultor": "Valter Rotter", "whatsapp": "5511999999999", "logo_initials": "SC", "logo_color": "#1B3A6B", "logo_bg": "#E3EEF9", "logo_url": ""},
-  {"login": "72957814000120", "h": "509694b0a010c6431900e71b8210521af57d39ce8e64deb365f0a5c6c9a2ef6d", "perfil": "CLIENTE", "cnpj": "72957814000120", "nome": "SANTA CASA DE MISERICORDIA DE VOTUPORANGA", "cnpj_fmt": "72.957.814/0001-20", "consultor": "Valter Rotter", "whatsapp": "5511999999999", "logo_initials": "SC", "logo_color": "#1B3A6B", "logo_bg": "#E3EEF9", "logo_url": ""},
-  {"login": "54667316000160", "h": "6fc8f95bc6465849249d974d53eecc56c00ffda0fc3c7024bfa5b8e4d794b072", "perfil": "CLIENTE", "cnpj": "54667316000160", "nome": "SOCIEDADE DE BENEFICENCIA DE PIRAJU", "cnpj_fmt": "54.667.316/0001-60", "consultor": "Diego Dias", "whatsapp": "5511999999999", "logo_initials": "SD", "logo_color": "#1B3A6B", "logo_bg": "#E3EEF9", "logo_url": ""},
-  {"login": "54667316000161", "h": "6fc8f95bc6465849249d974d53eecc56c00ffda0fc3c7024bfa5b8e4d794b072", "perfil": "CLIENTE", "cnpj": "54667316000161", "nome": "SOCIEDADE DE BENEFICENCIA DE PIRAJU", "cnpj_fmt": "54.667.316/0001-61", "consultor": "Valter Rotter", "whatsapp": "5511999999999", "logo_initials": "SD", "logo_color": "#1B3A6B", "logo_bg": "#E3EEF9", "logo_url": ""},
-  {"login": "valter", "h": "428741ff862440b5f2ac0f82393466d8284df9679db7cb002d8c4850fb0a25b5", "perfil": "CONSULTOR", "cnpj": null, "nome": "Valter Rotter", "cnpj_fmt": null, "consultor": null, "whatsapp": "5511999999999", "logo_initials": "GCA", "logo_color": "#1B3A6B", "logo_bg": "#E3EEF9"},
-  {"login": "carla", "h": "8813d406421e0063ef8ec81fc45170338b4cfd9547ee1ab157b90b46bcb6e2a7", "perfil": "CONSULTOR", "cnpj": null, "nome": "Carla Souza", "cnpj_fmt": null, "consultor": null, "whatsapp": "5511999999999", "logo_initials": "GCA", "logo_color": "#1B3A6B", "logo_bg": "#E3EEF9"},
-  {"login": "admin", "h": "8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918", "perfil": "CONSULTOR", "cnpj": null, "nome": "Administrador", "cnpj_fmt": null, "consultor": null, "whatsapp": "5511999999999", "logo_initials": "GCA", "logo_color": "#1B3A6B", "logo_bg": "#E3EEF9"}
-];
+var CA_DB = [];
 /* ═══════════════════════════════════════════════
    DEMO DATA
 ═══════════════════════════════════════════════ */
-var CA_DEMO = [
-  {"id": "883474", "cnpj": "60945854000172", "parlamentar": "Arnaldo Faria de Sá", "cargo": "Deputado Estadual", "esfera": "Estadual", "tipo": "Equipamentos", "status": "Prestação de Contas Concluída", "data": "2019-09-18", "ano": 2019, "periodo": "2019 Q3", "indicado": 300000.0, "pago": 191000.0, "saldo": 109000.0, "consultor": "Valter Rotter"},
-  {"id": "937212", "cnpj": "60945854000172", "parlamentar": "Vinicius Poit", "cargo": "Deputado Feferal", "esfera": "Federal", "tipo": "Equipamentos", "status": "Prestação de Contas Iniciada por Antecipação", "data": "2022-12-20", "ano": 2019, "periodo": "2019 Q3", "indicado": 158.515, "pago": 69.64641, "saldo": 88.86858999999998, "consultor": "Valter Rotter"},
-  {"id": "961625", "cnpj": "60945854000172", "parlamentar": "Adriana Ventura", "cargo": "Deputada Federal", "esfera": "Federal", "tipo": "Equipamentos", "status": "Em execução", "data": "2024-05-27", "ano": 2024, "periodo": "2024 Q2", "indicado": 380168.0, "pago": 228034.75, "saldo": 147.41225, "consultor": "Valter Rotter"},
-  {"id": "944599", "cnpj": "60945854000172", "parlamentar": "Policial Katia Sastre", "cargo": "Deputada Federal", "esfera": "Federal", "tipo": "Equipamentos", "status": "Em execução", "data": "2023-06-16", "ano": 2023, "periodo": "2023 Q1", "indicado": 0, "pago": 861.75291, "saldo": 0, "consultor": "Valter Rotter"},
-  {"id": "946563", "cnpj": "60945854000172", "parlamentar": "Policial Katia Sastre", "cargo": "Deputada Federal", "esfera": "Federal", "tipo": "Equipamentos", "status": "Em execução", "data": "2023-08-24", "ano": 2023, "periodo": "2023 Q1", "indicado": 188846.0, "pago": 109.36984, "saldo": 77230.16, "consultor": "Valter Rotter"},
-  {"id": "942664", "cnpj": "60945854000172", "parlamentar": "Orlando Silva", "cargo": "Deputado Federal", "esfera": "Federal", "tipo": "Equipamentos", "status": "Em execução", "data": "2023-06-16", "ano": 2023, "periodo": "2023 Q1", "indicado": 400342.0, "pago": 265748.78, "saldo": 134.25122, "consultor": "Valter Rotter"},
-  {"id": "942657", "cnpj": "60945854000172", "parlamentar": "Tiririca", "cargo": "Deputado Federal", "esfera": "Federal", "tipo": "Equipamentos", "status": "Em execução", "data": "2023-06-16", "ano": 2023, "periodo": "2023 Q1", "indicado": 400.872, "pago": 33391.82, "saldo": 366.60818, "consultor": "Valter Rotter"},
-  {"id": "942653", "cnpj": "60945854000172", "parlamentar": "David Soares", "cargo": "Deputado Federal", "esfera": "Federal", "tipo": "Equipamentos", "status": "Em execução", "data": "2023-06-16", "ano": 2023, "periodo": "2023 Q1", "indicado": 355.655, "pago": 0.0, "saldo": 355.655, "consultor": "Valter Rotter"},
-  {"id": "944150", "cnpj": "60945854000172", "parlamentar": "Vinicius Carvalho", "cargo": "Deputado Federal", "esfera": "Federal", "tipo": "Equipamentos", "status": "Prestação de Contas Iniciada por Antecipação", "data": "2023-06-15", "ano": 2023, "periodo": "2023 Q1", "indicado": 254.32, "pago": 248.16176, "saldo": 6.158240000000006, "consultor": "Valter Rotter"},
-  {"id": "954419", "cnpj": "60945854000172", "parlamentar": "Vicentinho", "cargo": "Deputado Federal", "esfera": "Federal", "tipo": "Equipamentos", "status": "Dar inicio na Prestação de contas", "data": "27/12/2023", "ano": 2023, "periodo": "2023 Q1", "indicado": 214.823, "pago": 95.2412, "saldo": 119.5818, "consultor": "Valter Rotter"},
-  {"id": "919921", "cnpj": "60945854000172", "parlamentar": "Vicentinho", "cargo": "Deputado Federal", "esfera": "Federal", "tipo": "Equipamentos", "status": "Prestação de Contas enviada para Análise", "data": "2021-11-29", "ano": 2021, "periodo": "2023 Q1", "indicado": 251165.0, "pago": 152489.4, "saldo": 98675.6, "consultor": "Valter Rotter"},
-  {"id": "938135", "cnpj": "11636872000167", "parlamentar": "Coronel Tadeu", "cargo": "Deputado Federal", "esfera": "Federal", "tipo": "Equipamentos", "status": "Prestação de Contas enviada para Análise", "data": "2022-12-28", "ano": 2022, "periodo": "2023 Q1", "indicado": 434741.0, "pago": 286879.0, "saldo": 147862.0, "consultor": "Valter Rotter"},
-  {"id": "961317", "cnpj": "06870026000177", "parlamentar": "Merlong Solano", "cargo": "Deputado Federal", "esfera": "Federal", "tipo": "Equipamentos", "status": "Em execução", "data": "2024-05-21", "ano": 2024, "periodo": "2024 Q2", "indicado": 513554.0, "pago": 482395.7, "saldo": 31158.29999999999, "consultor": "Valter Rotter"},
-  {"id": "947527", "cnpj": "06870026000177", "parlamentar": "—", "cargo": "", "esfera": "", "tipo": "Equipamentos", "status": "Dar inicio na Prestação de contas", "data": "2023-10-05", "ano": 2023, "periodo": "2023 Q1", "indicado": 0, "pago": 0, "saldo": 0, "consultor": "Valter Rotter"},
-  {"id": "954420", "cnpj": "54370630000187", "parlamentar": "-", "cargo": "-", "esfera": "Federal", "tipo": "Programa", "status": "Em execução", "data": "2024-01-09", "ano": 2024, "periodo": "2024Q1", "indicado": 9434738.05, "pago": 7948269.13, "saldo": 1486468.8, "consultor": "Valter Rotter"},
-  {"id": "944156", "cnpj": "54370630000187", "parlamentar": "Adriana Ventura", "cargo": "Deputada Federal", "esfera": "Federal", "tipo": "Emenda Parlamentar", "status": "Em execução", "data": "2023-11-17", "ano": 2023, "periodo": "2023Q3", "indicado": 399996.0, "pago": 373125.87, "saldo": 26870.130000000005, "consultor": "Valter Rotter"},
-  {"id": "961697", "cnpj": "54370630000187", "parlamentar": "Rosângela Moro", "cargo": "Deputada Federal", "esfera": "Federal", "tipo": "Emenda Parlamentar", "status": "Prestação de Contas em Análise", "data": "2024-12-13", "ano": 2024, "periodo": "2024Q3", "indicado": 504694.0, "pago": 422796.77, "saldo": 81897.22999999998, "consultor": "Valter Rotter"},
-  {"id": "961699", "cnpj": "54370630000187", "parlamentar": "Vicentinho", "cargo": "Deputado Federal", "esfera": "Federal", "tipo": "Emenda Parlamentar", "status": "Prestação de Contas em Análise", "data": "2024-12-13", "ano": 2024, "periodo": "2024Q3", "indicado": 207024.0, "pago": 165071.77, "saldo": 41952.23000000001, "consultor": "Valter Rotter"},
-  {"id": "988867", "cnpj": "54370630000187", "parlamentar": "Rosângela Moro", "cargo": "Deputada Federal", "esfera": "Federal", "tipo": "Emenda Parlamentar", "status": "Em execução", "data": "2025-12-17", "ano": 2025, "periodo": "2025Q3", "indicado": 483586.0, "pago": 0.0, "saldo": 424623.16, "consultor": "Valter Rotter"},
-  {"id": "95437026002", "cnpj": "54370630000187", "parlamentar": "Tabata Amaral", "cargo": "Deputada", "esfera": "Federal", "tipo": "Emenda Funcional", "status": "Em análise", "data": "-", "ano": 2026, "periodo": "2026", "indicado": 0, "pago": 0, "saldo": 306550.0, "consultor": "Márcia Duarte"},
-  {"id": "95437026001", "cnpj": "54370630000187", "parlamentar": "Luiz Philippe O. Bragança", "cargo": "Deputado", "esfera": "Federal", "tipo": "Emenda Funcional", "status": "Em análise", "data": "-", "ano": 2026, "periodo": "2026", "indicado": 0, "pago": 0, "saldo": 483000.0, "consultor": "Márcia Duarte"},
-  {"id": "119644", "cnpj": "54370630000187", "parlamentar": "Marta Costa", "cargo": "Deputada", "esfera": "Estadual", "tipo": "Custeio", "status": "Em Cadastramento", "data": "1", "ano": 2026, "periodo": "2026", "indicado": 0, "pago": 0, "saldo": 150000.0, "consultor": "Márcia Duarte"},
-  {"id": "105696", "cnpj": "54370630000187", "parlamentar": "Professora Bebel", "cargo": "Deputada", "esfera": "Estadual", "tipo": "Custeio", "status": "Aguardando análise técnica - CRS", "data": "5", "ano": 2026, "periodo": "2026", "indicado": 200000.0, "pago": 0, "saldo": 200000.0, "consultor": "Márcia Duarte"},
-  {"id": "105696", "cnpj": "54370630000187", "parlamentar": "Alex Madureira", "cargo": "Deputado", "esfera": "Estadual", "tipo": "Custeio", "status": "Aguardando análise técnica - CRS", "data": "5", "ano": 2026, "periodo": "2026", "indicado": 200000.0, "pago": 0, "saldo": 200000.0, "consultor": "Márcia Duarte"},
-  {"id": "105696", "cnpj": "54370630000187", "parlamentar": "Bruna Furlan", "cargo": "Deputada", "esfera": "Estadual", "tipo": "Custeio", "status": "Aguardando análise técnica - CRS", "data": "5", "ano": 2026, "periodo": "2026", "indicado": 150000.0, "pago": 0, "saldo": 150000.0, "consultor": "Márcia Duarte"},
-  {"id": "105696", "cnpj": "54370630000187", "parlamentar": "Fabiana Bolsonaro", "cargo": "Deputada", "esfera": "Estadual", "tipo": "Custeio", "status": "Aguardando análise técnica - CRS", "data": "5", "ano": 2026, "periodo": "2026", "indicado": 70000.0, "pago": 0, "saldo": 70000.0, "consultor": "Márcia Duarte"},
-  {"id": "105384", "cnpj": "54370630000187", "parlamentar": "Leandro Siqueira", "cargo": "Deputado", "esfera": "Estadual", "tipo": "Investimento", "status": "Aguardando análise técnica - CRS", "data": "21", "ano": 2026, "periodo": "2026", "indicado": 0, "pago": 0, "saldo": 151790.0, "consultor": "Márcia Duarte"},
-  {"id": "97342", "cnpj": "54370630000187", "parlamentar": "Major Mecca", "cargo": "Deputado", "esfera": "Estadual", "tipo": "Custeio", "status": "Em processo SIAFEM", "data": "24", "ano": 2025, "periodo": "2025", "indicado": 50000.0, "pago": 0, "saldo": 50593.12, "consultor": "Márcia Duarte"},
-  {"id": "92126", "cnpj": "54370630000187", "parlamentar": "Clarice Ganem", "cargo": "Deputado", "esfera": "Estadual", "tipo": "Custeio", "status": "Concluído", "data": "", "ano": 2025, "periodo": "", "indicado": 100000.0, "pago": 100000.0, "saldo": 0, "consultor": "Feliipe"},
-  {"id": "90370", "cnpj": "54370630000187", "parlamentar": "Major Mecca", "cargo": "Deputado", "esfera": "Estadual", "tipo": "Custeio", "status": "Concluído", "data": "", "ano": 2025, "periodo": "", "indicado": 50000.0, "pago": 50000.0, "saldo": 0, "consultor": "Feliipe"},
-  {"id": "89504", "cnpj": "54370630000187", "parlamentar": "Alex Madureira", "cargo": "Deputado", "esfera": "Estadual", "tipo": "Custeio", "status": "Concluído", "data": "", "ano": 2025, "periodo": "", "indicado": 300000.0, "pago": 300000.0, "saldo": 0, "consultor": "Feliipe"},
-  {"id": "89504", "cnpj": "54370630000187", "parlamentar": "Andréa Werner", "cargo": "Deputado", "esfera": "Estadual", "tipo": "Custeio", "status": "Concluído", "data": "", "ano": 2025, "periodo": "", "indicado": 100000.0, "pago": 100000.0, "saldo": 0, "consultor": "Feliipe"},
-  {"id": "89504", "cnpj": "54370630000187", "parlamentar": "Marta Costa", "cargo": "Deputado", "esfera": "Estadual", "tipo": "Custeio", "status": "Concluído", "data": "", "ano": 2025, "periodo": "", "indicado": 150000.0, "pago": 150000.0, "saldo": 0, "consultor": "Feliipe"},
-  {"id": "89504", "cnpj": "54370630000187", "parlamentar": "Professora Bebel", "cargo": "Deputado", "esfera": "Estadual", "tipo": "Custeio", "status": "Concluído", "data": "", "ano": 2025, "periodo": "", "indicado": 400000.0, "pago": 400000.0, "saldo": 0, "consultor": "Feliipe"},
-  {"id": "89504", "cnpj": "54370630000187", "parlamentar": "Ana Perugini", "cargo": "Deputado", "esfera": "Estadual", "tipo": "Custeio", "status": "Concluído", "data": "", "ano": 2025, "periodo": "", "indicado": 100000.0, "pago": 100000.0, "saldo": 0, "consultor": "Feliipe"},
-  {"id": "89504", "cnpj": "54370630000187", "parlamentar": "Oseias de Madureira", "cargo": "Deputado", "esfera": "Estadual", "tipo": "Custeio", "status": "Concluído", "data": "", "ano": 2025, "periodo": "", "indicado": 100000.0, "pago": 100000.0, "saldo": 0, "consultor": "Feliipe"},
-  {"id": "86206", "cnpj": "54370630000187", "parlamentar": "Andréa Werner", "cargo": "Deputado", "esfera": "Estadual", "tipo": "Investimento", "status": "Concluído", "data": "", "ano": 2025, "periodo": "", "indicado": 0, "pago": 0, "saldo": 0, "consultor": "Feliipe"},
-  {"id": "76138", "cnpj": "54370630000187", "parlamentar": "Professora Bebel", "cargo": "Deputado", "esfera": "Estadual", "tipo": "Investimento", "status": "Concluído", "data": "", "ano": 2024, "periodo": "", "indicado": 2300000.0, "pago": 2300000.0, "saldo": 0, "consultor": "Feliipe"},
-  {"id": "76137", "cnpj": "54370630000187", "parlamentar": "Leonardo Siqueira", "cargo": "Deputado", "esfera": "Estadual", "tipo": "Investimento", "status": "Concluído", "data": "", "ano": 2024, "periodo": "", "indicado": 0, "pago": 0, "saldo": 0, "consultor": "Feliipe"},
-  {"id": "76136", "cnpj": "54370630000187", "parlamentar": "Luiz Philippe O. Bragança", "cargo": "Deputado", "esfera": "Estadual", "tipo": "Investimento", "status": "Concluído", "data": "", "ano": 2024, "periodo": "", "indicado": 465000.0, "pago": 465000.0, "saldo": 0, "consultor": "Feliipe"},
-  {"id": "76135", "cnpj": "54370630000187", "parlamentar": "Jonas Donizette", "cargo": "Deputado", "esfera": "Estadual", "tipo": "Investimento", "status": "Concluído", "data": "", "ano": 2024, "periodo": "", "indicado": 300000.0, "pago": 300000.0, "saldo": 0, "consultor": "Feliipe"},
-  {"id": "76134", "cnpj": "54370630000187", "parlamentar": "Mario Frias", "cargo": "Deputado", "esfera": "Estadual", "tipo": "Investimento", "status": "Concluído", "data": "", "ano": 2024, "periodo": "", "indicado": 400000.0, "pago": 400000.0, "saldo": 0, "consultor": "Feliipe"},
-  {"id": "76133", "cnpj": "54370630000187", "parlamentar": "Tiririca", "cargo": "Deputado", "esfera": "Estadual", "tipo": "Custeio", "status": "Concluído", "data": "", "ano": 2024, "periodo": "", "indicado": 300000.0, "pago": 300000.0, "saldo": 0, "consultor": "Feliipe"},
-  {"id": "70199", "cnpj": "54370630000187", "parlamentar": "Ediane Maria", "cargo": "Deputado", "esfera": "Estadual", "tipo": "Investimento", "status": "Concluído", "data": "", "ano": 2024, "periodo": "", "indicado": 300000.0, "pago": 300000.0, "saldo": 0, "consultor": "Feliipe"},
-  {"id": "70159", "cnpj": "54370630000187", "parlamentar": "Oseias de Madureira", "cargo": "Deputado", "esfera": "Estadual", "tipo": "Custeio", "status": "Concluído", "data": "", "ano": 2024, "periodo": "", "indicado": 150000.0, "pago": 150000.0, "saldo": 0, "consultor": "Feliipe"},
-  {"id": "70031", "cnpj": "54370630000187", "parlamentar": "Rogério Santos", "cargo": "Deputado", "esfera": "Estadual", "tipo": "Investimento", "status": "Concluído", "data": "", "ano": 2024, "periodo": "", "indicado": 300000.0, "pago": 300000.0, "saldo": 0, "consultor": "Feliipe"},
-  {"id": "69992", "cnpj": "54370630000187", "parlamentar": "Lucas Bove", "cargo": "Deputado", "esfera": "Estadual", "tipo": "Custeio", "status": "Concluído", "data": "", "ano": 2024, "periodo": "", "indicado": 150000.0, "pago": 150000.0, "saldo": 0, "consultor": "Feliipe"},
-  {"id": "69918", "cnpj": "54370630000187", "parlamentar": "Major Mecca", "cargo": "Deputado", "esfera": "Estadual", "tipo": "Custeio", "status": "Concluído", "data": "", "ano": 2024, "periodo": "", "indicado": 100000.0, "pago": 100000.0, "saldo": 0, "consultor": "Feliipe"},
-  {"id": "69856", "cnpj": "54370630000187", "parlamentar": "Helio Donizate Zanatta", "cargo": "Deputado", "esfera": "Estadual", "tipo": "Custeio", "status": "Concluído", "data": "", "ano": 2024, "periodo": "", "indicado": 0, "pago": 0, "saldo": 0, "consultor": "Feliipe"},
-  {"id": "69676", "cnpj": "54370630000187", "parlamentar": "Valéria Bolsonaro", "cargo": "Deputado", "esfera": "Estadual", "tipo": "Investimento", "status": "Concluído", "data": "", "ano": 2024, "periodo": "", "indicado": 220000.0, "pago": 220000.0, "saldo": 0, "consultor": "Feliipe"},
-  {"id": "69397", "cnpj": "54370630000187", "parlamentar": "Professora Bebel", "cargo": "Deputado", "esfera": "Estadual", "tipo": "Investimento", "status": "Concluído", "data": "", "ano": 2024, "periodo": "", "indicado": 300000.0, "pago": 300000.0, "saldo": 0, "consultor": "Feliipe"},
-  {"id": "69362", "cnpj": "54370630000187", "parlamentar": "Alex Madureira", "cargo": "Deputado", "esfera": "Estadual", "tipo": "Custeio", "status": "Concluído", "data": "", "ano": 2024, "periodo": "", "indicado": 200000.0, "pago": 200000.0, "saldo": 0, "consultor": "Feliipe"},
-  {"id": "69340", "cnpj": "54370630000187", "parlamentar": "Carlos Cezar", "cargo": "Deputado", "esfera": "Estadual", "tipo": "Custeio", "status": "Concluído", "data": "", "ano": 2024, "periodo": "", "indicado": 0, "pago": 0, "saldo": 0, "consultor": "Feliipe"},
-  {"id": "69307", "cnpj": "54370630000187", "parlamentar": "Luiz Claudio Marcolino", "cargo": "Deputado", "esfera": "Estadual", "tipo": "Custeio", "status": "Concluído", "data": "", "ano": 2024, "periodo": "", "indicado": 100000.0, "pago": 100000.0, "saldo": 0, "consultor": "Feliipe"},
-  {"id": "63408", "cnpj": "54370630000187", "parlamentar": "Oséias de Madureira", "cargo": "Deputado", "esfera": "Estadual", "tipo": "Custeio", "status": "Concluído", "data": "", "ano": 2023, "periodo": "", "indicado": 100000.0, "pago": 100000.0, "saldo": 0, "consultor": "Feliipe"},
-  {"id": "60474", "cnpj": "54370630000187", "parlamentar": "Professora Bebel", "cargo": "Deputado", "esfera": "Estadual", "tipo": "Custeio", "status": "Concluído", "data": "", "ano": 2023, "periodo": "", "indicado": 160000.0, "pago": 160000.0, "saldo": 0, "consultor": "Feliipe"},
-  {"id": "58155", "cnpj": "54370630000187", "parlamentar": "Major Mecca", "cargo": "Deputado", "esfera": "Estadual", "tipo": "Custeio", "status": "Concluído", "data": "", "ano": 2023, "periodo": "", "indicado": 100000.0, "pago": 100000.0, "saldo": 0, "consultor": "Feliipe"},
-  {"id": "57943", "cnpj": "54370630000187", "parlamentar": "Alex Madureira", "cargo": "Deputado", "esfera": "Estadual", "tipo": "Custeio", "status": "Concluído", "data": "", "ano": 2023, "periodo": "", "indicado": 200000.0, "pago": 200000.0, "saldo": 0, "consultor": "Feliipe"},
-  {"id": "57851", "cnpj": "54370630000187", "parlamentar": "Marta Costa", "cargo": "Deputado", "esfera": "Estadual", "tipo": "Custeio", "status": "Concluído", "data": "", "ano": 2023, "periodo": "", "indicado": 100000.0, "pago": 100000.0, "saldo": 0, "consultor": "Feliipe"},
-  {"id": "57648", "cnpj": "54370630000187", "parlamentar": "Roberto Morais", "cargo": "Deputado", "esfera": "Estadual", "tipo": "Custeio", "status": "Concluído", "data": "", "ano": 2023, "periodo": "", "indicado": 500000.0, "pago": 500000.0, "saldo": 0, "consultor": "Feliipe"},
-  {"id": "57481", "cnpj": "54370630000187", "parlamentar": "Valéria Bolsonaro", "cargo": "Deputado", "esfera": "Estadual", "tipo": "Investimento", "status": "Concluído", "data": "", "ano": 2023, "periodo": "", "indicado": 219000.0, "pago": 219000.0, "saldo": 0, "consultor": "Feliipe"},
-  {"id": "57469", "cnpj": "54370630000187", "parlamentar": "Gil Diniz", "cargo": "Deputado", "esfera": "Estadual", "tipo": "Investimento", "status": "Concluído", "data": "", "ano": 2023, "periodo": "", "indicado": 0, "pago": 0, "saldo": 0, "consultor": "Feliipe"},
-  {"id": "32647", "cnpj": "54370630000187", "parlamentar": "Rogério Nogueira", "cargo": "Deputado", "esfera": "Estadual", "tipo": "Custeio", "status": "Concluído", "data": "", "ano": 2022, "periodo": "", "indicado": 87654.16, "pago": 87654.16, "saldo": 0, "consultor": "Feliipe"},
-  {"id": "32547", "cnpj": "54370630000187", "parlamentar": "Daniel José", "cargo": "Deputado", "esfera": "Estadual", "tipo": "Investimento", "status": "Concluído", "data": "", "ano": 2022, "periodo": "", "indicado": 0, "pago": 0, "saldo": 0, "consultor": "Feliipe"},
-  {"id": "32125", "cnpj": "54370630000187", "parlamentar": "Gil Diniz", "cargo": "Deputado", "esfera": "Estadual", "tipo": "Custeio", "status": "Concluído", "data": "", "ano": 2022, "periodo": "", "indicado": 200000.0, "pago": 200000.0, "saldo": 0, "consultor": "Feliipe"},
-  {"id": "31456", "cnpj": "54370630000187", "parlamentar": "Coronel Telhada", "cargo": "Deputado", "esfera": "Estadual", "tipo": "Investimento", "status": "Concluído", "data": "", "ano": 2022, "periodo": "", "indicado": 210000.0, "pago": 210000.0, "saldo": 0, "consultor": "Feliipe"},
-  {"id": "31361", "cnpj": "54370630000187", "parlamentar": "Roberto Morais", "cargo": "Deputado", "esfera": "Estadual", "tipo": "Custeio", "status": "Concluído", "data": "", "ano": 2022, "periodo": "", "indicado": 400000.0, "pago": 400000.0, "saldo": 0, "consultor": "Feliipe"},
-  {"id": "31204", "cnpj": "54370630000187", "parlamentar": "Marta Costa", "cargo": "Deputado", "esfera": "Estadual", "tipo": "Custeio", "status": "Concluído", "data": "", "ano": 2022, "periodo": "", "indicado": 100000.0, "pago": 100000.0, "saldo": 0, "consultor": "Feliipe"},
-  {"id": "30890", "cnpj": "54370630000187", "parlamentar": "Alex Madureira", "cargo": "Deputado", "esfera": "Estadual", "tipo": "Custeio", "status": "Concluído", "data": "", "ano": 2022, "periodo": "", "indicado": 150000.0, "pago": 150000.0, "saldo": 0, "consultor": "Feliipe"},
-  {"id": "895515", "cnpj": "51425106000178", "parlamentar": "Vanderlei Macris", "cargo": "Deputado Federal", "esfera": "Federal", "tipo": "Equipamentos", "status": "Prestação de Contas Concluída", "data": "2019-12-26", "ano": 2019, "periodo": "2019 Q3", "indicado": 250000.0, "pago": 156106.88, "saldo": 93893.12, "consultor": "Valter Rotter"},
-  {"id": "904684", "cnpj": "51425106000178", "parlamentar": "-", "cargo": "-", "esfera": "Federal", "tipo": "Equipamentos", "status": "Prestação de Contas em Complementação", "data": "2020-10-26", "ano": 2020, "periodo": "2020 Q3", "indicado": 100913.0, "pago": 11570.0, "saldo": 89343.0, "consultor": "Valter Rotter"},
-  {"id": "923543", "cnpj": "51425106000178", "parlamentar": "Arnaldo Jardim", "cargo": "Deputado Federal", "esfera": "Federal", "tipo": "Reforma", "status": "Prestação de Contas Concluída", "data": "2021-12-27", "ano": 2021, "periodo": "2021 Q3", "indicado": 299789.0, "pago": 299770.81, "saldo": 18.19000000000233, "consultor": "Valter Rotter"},
-  {"id": "870644", "cnpj": "43987668000187", "parlamentar": "Jorge Tadeu Mudalen", "cargo": "Deputado Federal", "esfera": "Federal", "tipo": "Equipamentos", "status": "Em execução", "data": "2018-05-22", "ano": 2018, "periodo": "2018 Q2", "indicado": 200000.0, "pago": 0, "saldo": 200000.0, "consultor": "Diego Dias"},
-  {"id": "850699", "cnpj": "43987668000187", "parlamentar": "Keiko Ota", "cargo": "Deputado Federal", "esfera": "Federal", "tipo": "Equipamentos", "status": "Prestação de Contas Concluída", "data": "2017-09-01", "ano": 2017, "periodo": "2017 Q3", "indicado": 100000.0, "pago": 92200.0, "saldo": 7800.0, "consultor": "Valter Rotter"},
-  {"id": "915507", "cnpj": "43987668000187", "parlamentar": "Alencar Santana", "cargo": "Deputado Federal", "esfera": "Federal", "tipo": "Equipamentos", "status": "Prestação de Contas Em Análise", "data": "2021-08-09", "ano": 2021, "periodo": "2021 Q2", "indicado": 151570.0, "pago": 149900.0, "saldo": 1670.0, "consultor": "Valter Rotter"},
-  {"id": "929880", "cnpj": "43987668000187", "parlamentar": "Alencar Santana", "cargo": "Deputado Federal", "esfera": "Federal", "tipo": "Equipamentos", "status": "Aguardando Prestação de Contas", "data": "2022-05-10", "ano": 2022, "periodo": "2022 Q2", "indicado": 150022.0, "pago": 119305.0, "saldo": 30717.0, "consultor": "Valter Rotter"},
-  {"id": "929878", "cnpj": "43987668000187", "parlamentar": "Eli Corrêa Filho", "cargo": "Deputado Federal", "esfera": "Federal", "tipo": "Equipamentos", "status": "Prestação de Contas em Análise", "data": "2022-07-15", "ano": 2022, "periodo": "2022 Q2", "indicado": 216613.0, "pago": 194448.96, "saldo": 22164.040000000008, "consultor": "Valter Rotter"},
-  {"id": "947167", "cnpj": "43987668000187", "parlamentar": "Alencar Santana", "cargo": "Deputado Federal", "esfera": "Federal", "tipo": "Equipamentos", "status": "Prestação de Contas em Análise", "data": "2023-11-24", "ano": 2023, "periodo": "2023 Q3", "indicado": 150160.0, "pago": 146980.0, "saldo": 3180.0, "consultor": "Valter Rotter"},
-  {"id": "872081", "cnpj": "43987668000187", "parlamentar": "-", "cargo": "-", "esfera": "Federal", "tipo": "Equipamentos", "status": "Em execução", "data": "2018-10-09", "ano": 2018, "periodo": "2018 Q3", "indicado": 255748.0, "pago": 172023.0, "saldo": 83725.0, "consultor": "Diego Dias"},
-  {"id": "852485", "cnpj": "43987668000187", "parlamentar": "Aloysio Nunes Ferreira", "cargo": "Senador", "esfera": "Federal", "tipo": "Equipamentos", "status": "Em execução", "data": "2017-12-15", "ano": 2017, "periodo": "2017 Q3", "indicado": 180988.0, "pago": 0, "saldo": 180988.0, "consultor": "Diego Dias"},
-  {"id": "850994", "cnpj": "43987668000187", "parlamentar": "Jorge Tadeu Mudalen", "cargo": "Deputado Federal", "esfera": "Federal", "tipo": "Equipamentos", "status": "Em execução", "data": "2017-12-05", "ano": 2017, "periodo": "2017 Q3", "indicado": 199807.0, "pago": 69090.0, "saldo": 11471.0, "consultor": "Diego Dias"},
-  {"id": "961591", "cnpj": "43987668000187", "parlamentar": "Alencar Santana", "cargo": "Deputado Federal", "esfera": "Federal", "tipo": "Equipamentos", "status": "Em execução", "data": "2024-12-16", "ano": 2024, "periodo": "2024 Q3", "indicado": 220750.0, "pago": 0, "saldo": 220750.0, "consultor": "Diego Dias"},
-  {"id": "947171", "cnpj": "43987668000187", "parlamentar": "Eli Corrêa Filho", "cargo": "Deputado Federal", "esfera": "Federal", "tipo": "Equipamentos", "status": "Em execução", "data": "2023-11-24", "ano": 2023, "periodo": "2023 Q3", "indicado": 407697.0, "pago": 235044.0, "saldo": 172653.0, "consultor": "Diego Dias"},
-  {"id": "991388", "cnpj": "43987668000187", "parlamentar": "Juliana Cardoso", "cargo": "Deputado Federal", "esfera": "Federal", "tipo": "Equipamentos", "status": "Em execução", "data": "2025-12-31", "ano": 2025, "periodo": "2025 Q3", "indicado": 207020.0, "pago": 0, "saldo": 207020.0, "consultor": "Diego Dias"},
-  {"id": "937808", "cnpj": "46886149000110", "parlamentar": "-", "cargo": "-", "esfera": "Federal", "tipo": "Equipamentos", "status": "Prestação de Contas em Análise", "data": "2022-12-29", "ano": 2022, "periodo": "2022 Q3", "indicado": 153935.0, "pago": 84011.5, "saldo": 69923.5, "consultor": "Valter Rotter"},
-  {"id": "963435", "cnpj": "46886149000110", "parlamentar": "Simone Marquetto", "cargo": "Deputado Federal", "esfera": "Federal", "tipo": "Equipamentos", "status": "Em execução", "data": "2024-12-28", "ano": 2024, "periodo": "2022 Q3", "indicado": 500948.0, "pago": 0, "saldo": 484996.5, "consultor": "Diego Dias"},
-  {"id": "947172", "cnpj": "46886149000110", "parlamentar": "Eli Corrêa Filho", "cargo": "Deputado Federal", "esfera": "Federal", "tipo": "Equipamentos", "status": "Em execução", "data": "2023-11-24", "ano": 2023, "periodo": "2023 Q3", "indicado": 1467616.0, "pago": 0, "saldo": 1467616.0, "consultor": "Diego Dias"},
-  {"id": "944121", "cnpj": "55856710000100", "parlamentar": "Rosana Valle", "cargo": "Deputado Federal", "esfera": "Federal", "tipo": "Equipamentos", "status": "Em execução", "data": "2023-12-18", "ano": 2023, "periodo": "2023 Q3", "indicado": 670215.0, "pago": 224313.87, "saldo": 445901.13, "consultor": "Diego Dias"},
-  {"id": "944120", "cnpj": "55856710000100", "parlamentar": "Alexandre Leite", "cargo": "Deputado Federal", "esfera": "Federal", "tipo": "Equipamentos", "status": "Em execução", "data": "2023-12-18", "ano": 2023, "periodo": "2023 Q3", "indicado": 425776.0, "pago": 352600.0, "saldo": 73176.0, "consultor": "Diego Dias"},
-  {"id": "952917", "cnpj": "55856710000100", "parlamentar": "Alexandre Leite", "cargo": "Deputado Federal", "esfera": "Federal", "tipo": "Equipamentos", "status": "Em execução", "data": "2023-12-22", "ano": 2023, "periodo": "2023 Q3", "indicado": 202563.0, "pago": 69450.0, "saldo": 133113.0, "consultor": "Diego Dias"},
-  {"id": "959020", "cnpj": "89428734002204", "parlamentar": "Jorge Seif", "cargo": "Senador", "esfera": "Federal", "tipo": "Equipamentos", "status": "Em execução", "data": "2024-12-30", "ano": 2024, "periodo": "2024 Q3", "indicado": 561177.0, "pago": 0, "saldo": 561177.0, "consultor": "Diego Dias"},
-  {"id": "947146", "cnpj": "89428734002204", "parlamentar": "Gilson Marques", "cargo": "Deputado Federal", "esfera": "Federal", "tipo": "Equipamentos", "status": "Prestação de Contas Iniciada por Antecipação", "data": "2023-12-04", "ano": 2023, "periodo": "2023 Q3", "indicado": 255718.0, "pago": 171000.0, "saldo": 84718.0, "consultor": "Valter Rotter"},
-  {"id": "918942", "cnpj": "06870026000177", "parlamentar": "Rejane Dias", "cargo": "Deputado Federal", "esfera": "Federal", "tipo": "Equipamentos", "status": "Prestação de Contas Concluída", "data": "2021-11-29", "ano": 2021, "periodo": "2021 Q3", "indicado": 579147.0, "pago": 489000.0, "saldo": 90147.0, "consultor": "Valter Rotter"},
-  {"id": "943920", "cnpj": "06870026000177", "parlamentar": "Merlong Solano", "cargo": "Deputado Federal", "esfera": "Federal", "tipo": "Equipamentos", "status": "Prestação de Contas Concluída", "data": "2023-11-23", "ano": 2023, "periodo": "2023 Q3", "indicado": 1203313.0, "pago": 1199961.99, "saldo": 3351.0100000000093, "consultor": "Valter Rotter"},
-  {"id": "947527", "cnpj": "06870026000177", "parlamentar": "-", "cargo": "-", "esfera": "Federal", "tipo": "Equipamentos", "status": "Em execução", "data": "2024-05-21", "ano": 2024, "periodo": "2024 Q2", "indicado": 15519124.0, "pago": 482395.7, "saldo": 15036728.3, "consultor": "Diego Dias"},
-  {"id": "961317", "cnpj": "06870026000177", "parlamentar": "Merlong Solano", "cargo": "Deputado Federal", "esfera": "Federal", "tipo": "Equipamentos", "status": "Em execução", "data": "2023-10-05", "ano": 2023, "periodo": "2023 Q3", "indicado": 513554.0, "pago": 15483600.0, "saldo": 0, "consultor": "Diego Dias"},
-  {"id": "900810", "cnpj": "50795566000206", "parlamentar": "Alexandre Leite", "cargo": "Deputado Federal", "esfera": "Federal", "tipo": "Equipamentos", "status": "Prestação de Contas Concluída", "data": "2020-12-11", "ano": 2020, "periodo": "2020 Q3", "indicado": 250000.0, "pago": 242550.0, "saldo": 7450.0, "consultor": "Valter Rotter"},
-  {"id": "921287", "cnpj": "50795566000206", "parlamentar": "Adriana Ventura", "cargo": "Deputado Federal", "esfera": "Federal", "tipo": "Equipamentos", "status": "Prestação de Contas Concluída", "data": "2021-12-22", "ano": 2021, "periodo": "2021 Q3", "indicado": 630180.0, "pago": 586125.0, "saldo": 44055.0, "consultor": "Valter Rotter"},
-  {"id": "950101", "cnpj": "50795566000206", "parlamentar": "Vinicius Carvalho", "cargo": "Deputado Federal", "esfera": "Federal", "tipo": "Equipamentos", "status": "Prestação de Contas Em Análise", "data": "2023-11-27", "ano": 2023, "periodo": "2023 Q3", "indicado": 190432.0, "pago": 190000.0, "saldo": 432.0, "consultor": "Valter Rotter"},
-  {"id": "967770", "cnpj": "50795566000206", "parlamentar": "Ricardo Salles", "cargo": "Deputado Federal", "esfera": "Federal", "tipo": "Equipamentos", "status": "Prestação de Contas em Análise", "data": "2024-12-17", "ano": 2024, "periodo": "2024 Q3", "indicado": 845000.0, "pago": 845000.0, "saldo": 0, "consultor": "Valter Rotter"},
-  {"id": "990648", "cnpj": "50795566000125", "parlamentar": "Tabata Amaral", "cargo": "Deputado Federal", "esfera": "Federal", "tipo": "Equipamentos", "status": "Em execução", "data": "2025-12-29", "ano": 2025, "periodo": "2025 Q3", "indicado": 440000.0, "pago": 0, "saldo": 429896.61, "consultor": "Diego Dias"},
-  {"id": "888480", "cnpj": "50351626000110", "parlamentar": "Arnaldo Faria de Sá", "cargo": "Deputado Federal", "esfera": "Federal", "tipo": "Equipamentos", "status": "Prestação de Contas Em Análise", "data": "2019-12-10", "ano": 2019, "periodo": "2019 Q3", "indicado": 200000.0, "pago": 154911.09, "saldo": 45088.91, "consultor": "Valter Rotter"},
-  {"id": "883403", "cnpj": "50351626000110", "parlamentar": "Vitor Lippi", "cargo": "Deputado Federal", "esfera": "Federal", "tipo": "Equipamentos", "status": "Prestação de Contas em Análise", "data": "2019-07-24", "ano": 2019, "periodo": "2019 Q2", "indicado": 200450.0, "pago": 169837.68, "saldo": 30612.320000000007, "consultor": "Valter Rotter"},
-  {"id": "944130", "cnpj": "50351626000110", "parlamentar": "Vitor Lippi", "cargo": "Deputado Federal", "esfera": "Federal", "tipo": "Equipamentos", "status": "Em execução", "data": "2023-12-13", "ano": 2023, "periodo": "2023 Q3", "indicado": 199986.0, "pago": 118857.03, "saldo": 81128.97, "consultor": "Diego Dias"},
-  {"id": "985674", "cnpj": "62220637000140", "parlamentar": "Ricardo Salles", "cargo": "Deputado Federal", "esfera": "Federal", "tipo": "Equipamentos", "status": "Em execução", "data": "2025-12-04", "ano": 2025, "periodo": "2025 Q3", "indicado": 1002805.0, "pago": 0, "saldo": 866851.52, "consultor": "Diego Dias"},
-  {"id": "991230", "cnpj": "62220637000302", "parlamentar": "Ricardo Salles", "cargo": "Deputado Federal", "esfera": "Federal", "tipo": "Reforma", "status": "Cláusula Suspensiva (reforma)", "data": "2025-12-31", "ano": 2025, "periodo": "2025 Q3", "indicado": 975213.0, "pago": 0, "saldo": 975213.0, "consultor": "Diego Dias"},
-  {"id": "961452", "cnpj": "62220637000140", "parlamentar": "Vinicius Carvalho", "cargo": "Deputado Federal", "esfera": "Federal", "tipo": "Equipamentos", "status": "Prestação de Contas Iniciada por Antecipação", "data": "2024-12-18", "ano": 2024, "periodo": "2024 Q3", "indicado": 318990.0, "pago": 299985.0, "saldo": 19005.0, "consultor": "Diego Dias"},
-  {"id": "918398", "cnpj": "29640612000120", "parlamentar": "Paulo Ganime", "cargo": "Deputado Federal", "esfera": "Federal", "tipo": "Equipamentos", "status": "Em execução", "data": "2021-12-31", "ano": 2021, "periodo": "2021 Q3", "indicado": 1599640.0, "pago": 0, "saldo": 1599640.0, "consultor": "Diego Dias"},
-  {"id": "881220", "cnpj": "29640612000120", "parlamentar": "-", "cargo": "-", "esfera": "Federal", "tipo": "Equipamentos", "status": "Em execução", "data": "2018-12-26", "ano": 2018, "periodo": "2021 Q3", "indicado": 111820.0, "pago": 0, "saldo": 111820.0, "consultor": "Diego Dias"},
-  {"id": "930699", "cnpj": "29640612000120", "parlamentar": "Chris Tonietto", "cargo": "Deputado Federal", "esfera": "Federal", "tipo": "Equipamentos", "status": "Em execução", "data": "2022-12-13", "ano": 2022, "periodo": "2022 Q3", "indicado": 498316.0, "pago": 0, "saldo": 498316.0, "consultor": "Diego Dias"},
-  {"id": "971566", "cnpj": "29640612000120", "parlamentar": "Chris Tonietto", "cargo": "Deputado Federal", "esfera": "Federal", "tipo": "Equipamentos", "status": "Em execução", "data": "2024-12-28", "ano": 2024, "periodo": "2024 Q3", "indicado": 945384.0, "pago": 0, "saldo": 945384.0, "consultor": "Diego Dias"},
-  {"id": "953202", "cnpj": "29640612000120", "parlamentar": "Helio Lopes", "cargo": "Deputado Federal", "esfera": "Federal", "tipo": "Equipamentos", "status": "Em execução", "data": "2023-12-27", "ano": 2023, "periodo": "2023 Q3", "indicado": 499950.0, "pago": 59900.0, "saldo": 416194.0, "consultor": "Diego Dias"},
-  {"id": "949368", "cnpj": "29640612000120", "parlamentar": "-", "cargo": "-", "esfera": "Federal", "tipo": "Equipamentos", "status": "Em execução", "data": "2023-12-22", "ano": 2023, "periodo": "2023 Q3", "indicado": 728008.0, "pago": 0, "saldo": 666666.0, "consultor": "Diego Dias"},
-  {"id": "979731", "cnpj": "29640612000120", "parlamentar": "Carlos Jordy", "cargo": "Deputado Federal", "esfera": "Federal", "tipo": "Equipamentos", "status": "Em execução", "data": "2025-10-16", "ano": 2025, "periodo": "2025 Q3", "indicado": 3000000.0, "pago": 0, "saldo": 2605871.08, "consultor": "Diego Dias"},
-  {"id": "985139", "cnpj": "29640612000120", "parlamentar": "Flávio Bolsonaro", "cargo": "Senador", "esfera": "Federal", "tipo": "Equipamentos", "status": "Em execução", "data": "2025-11-26", "ano": 2025, "periodo": "2025 Q3", "indicado": 1500000.0, "pago": 0, "saldo": 671949.0, "consultor": "Diego Dias"},
-  {"id": "971407", "cnpj": "49052533000106", "parlamentar": "Eduardo Bolsonaro", "cargo": "Deputado Federal", "esfera": "Federal", "tipo": "Equipamentos", "status": "Em execução", "data": "2024-12-28", "ano": 2024, "periodo": "2024 Q3", "indicado": 600000.0, "pago": 388600.0, "saldo": 211400.0, "consultor": "Diego Dias"},
-  {"id": "949421", "cnpj": "49052533000106", "parlamentar": "Alencar Santana", "cargo": "Deputado Federal", "esfera": "Federal", "tipo": "Equipamentos", "status": "Prestação de Contas Iniciada por Antecipação", "data": "2023-12-30", "ano": 2023, "periodo": "2023 Q3", "indicado": 200462.0, "pago": 197461.42, "saldo": 3000.579999999987, "consultor": "Valter Rotter"},
-  {"id": "979737", "cnpj": "49052533000106", "parlamentar": "Adriana Ventura", "cargo": "Deputado Federal", "esfera": "Federal", "tipo": "Equipamentos", "status": "Em execução", "data": "2025-10-16", "ano": 2025, "periodo": "2025 Q3", "indicado": 500000.0, "pago": 0, "saldo": 470000.0, "consultor": "Diego Dias"},
-  {"id": "899542", "cnpj": "16413080000147", "parlamentar": "Jorge Solla", "cargo": "Deputado Federal", "esfera": "Federal", "tipo": "Equipamentos", "status": "Em execução", "data": "2020-12-31", "ano": 2020, "periodo": "2020 Q3", "indicado": 100047.0, "pago": 0, "saldo": 100047.0, "consultor": "Diego Dias"},
-  {"id": "924968", "cnpj": "49914773000172", "parlamentar": "-", "cargo": "-", "esfera": "Federal", "tipo": "Equipamentos", "status": "Em execução", "data": "2022-11-01", "ano": 2022, "periodo": "2022 Q3", "indicado": 172050.0, "pago": 0, "saldo": 114000.0, "consultor": "Diego Dias"},
-  {"id": "938135", "cnpj": "11636872000167", "parlamentar": "Coronel Tadeu", "cargo": "Deputado Federal", "esfera": "Federal", "tipo": "Equipamentos", "status": "Prestação de Contas em Análise", "data": "2022-12-28", "ano": 2022, "periodo": "2023 Q3", "indicado": 434741.0, "pago": 286879.0, "saldo": 147862.0, "consultor": "Valter Rotter"},
-  {"id": "944021", "cnpj": "16865909000142", "parlamentar": "Newton Cardoso Jr", "cargo": "Deputado Federal", "esfera": "Federal", "tipo": "Equipamentos", "status": "Em execução", "data": "2023-11-22", "ano": 2023, "periodo": "2023 Q3", "indicado": 379160.0, "pago": 150399.6, "saldo": 228760.4, "consultor": "Diego Dias"},
-  {"id": "904716", "cnpj": "47074851000908", "parlamentar": "Carlos Zarattini", "cargo": "Deputado Federal", "esfera": "Federal", "tipo": "Equipamentos", "status": "Prestação de Contas Concluída", "data": "2020-12-29", "ano": 2020, "periodo": "2020 Q3", "indicado": 250000.0, "pago": 233803.0, "saldo": 16197.0, "consultor": "Valter Rotter"},
-  {"id": "961618", "cnpj": "47074851000908", "parlamentar": "Alencar Santana", "cargo": "Deputado Federal", "esfera": "Federal", "tipo": "Equipamentos", "status": "Em execução", "data": "2024-12-19", "ano": 2024, "periodo": "2024 Q3", "indicado": 509336.0, "pago": 0, "saldo": 509336.0, "consultor": "Diego Dias"},
-  {"id": "947248", "cnpj": "47074851000908", "parlamentar": "Adriana Ventura", "cargo": "Deputado Federal", "esfera": "Federal", "tipo": "Equipamentos", "status": "Prestação de Contas em Análise", "data": "2023-11-24", "ano": 2023, "periodo": "2023 Q3", "indicado": 273000.0, "pago": 224443.0, "saldo": 48557.0, "consultor": "Valter Rotter"},
-  {"id": "988623", "cnpj": "47074851000908", "parlamentar": "Adriana Ventura", "cargo": "Deputado Federal", "esfera": "Federal", "tipo": "Equipamentos", "status": "Em execução", "data": "2025-12-19", "ano": 2025, "periodo": "2025 Q3", "indicado": 452085.0, "pago": 0, "saldo": 452085.0, "consultor": "Diego Dias"},
-  {"id": "989498", "cnpj": "47074851000908", "parlamentar": "Alencar Santana", "cargo": "Deputado Federal", "esfera": "Federal", "tipo": "Equipamentos", "status": "Em execução", "data": "2025-12-22", "ano": 2025, "periodo": "2025 Q3", "indicado": 200800.0, "pago": 0, "saldo": 200800.0, "consultor": "Diego Dias"},
-  {"id": "929895", "cnpj": "47074851000819", "parlamentar": "Eduardo Cury", "cargo": "Deputado Federal", "esfera": "Federal", "tipo": "Equipamentos", "status": "Em execução", "data": "2022-06-15", "ano": 2022, "periodo": "2022 Q2", "indicado": 249166.0, "pago": 159846.14, "saldo": 62500.0, "consultor": "Diego Dias"},
-  {"id": "913319", "cnpj": "47074851000819", "parlamentar": "Alexis Fonteyne", "cargo": "Deputado Federal", "esfera": "Federal", "tipo": "Equipamentos", "status": "Em execução", "data": "2021-09-03", "ano": 2021, "periodo": "2021 Q3", "indicado": 258768.0, "pago": 189040.72, "saldo": 19163.2, "consultor": "Diego Dias"},
-  {"id": "946449", "cnpj": "47074851000819", "parlamentar": "Renata Abreu", "cargo": "Deputado Federal", "esfera": "Federal", "tipo": "Equipamentos", "status": "Em execução", "data": "2023-11-28", "ano": 2023, "periodo": "2023 Q3", "indicado": 207798.0, "pago": 101076.0, "saldo": 56000.0, "consultor": "Diego Dias"},
-  {"id": "988728", "cnpj": "47074851000819", "parlamentar": "Renata Abreu", "cargo": "Deputado Federal", "esfera": "Federal", "tipo": "Equipamentos", "status": "Em execução", "data": "2025-12-24", "ano": 2025, "periodo": "2024 Q3", "indicado": 200800.0, "pago": 0, "saldo": 200800.0, "consultor": "Diego Dias"},
-  {"id": "904719", "cnpj": "47074851000142", "parlamentar": "-", "cargo": "-", "esfera": "Federal", "tipo": "Equipamentos", "status": "Prestação de Contas em Análise", "data": "2020-12-23", "ano": 2020, "periodo": "2020 Q3", "indicado": 101383.0, "pago": 42722.8, "saldo": 58660.2, "consultor": "Valter Rotter"},
-  {"id": "915882", "cnpj": "47074851000142", "parlamentar": "Relator Geral", "cargo": "-", "esfera": "Federal", "tipo": "Equipamentos", "status": "Prestação de Contas em Análise", "data": "2021-10-19", "ano": 2021, "periodo": "2021 Q3", "indicado": 292330.0, "pago": 292000.0, "saldo": 330.0, "consultor": "Valter Rotter"},
-  {"id": "949228", "cnpj": "05877609000167", "parlamentar": "Nelson Barbudo", "cargo": "Deputado Federal", "esfera": "Federal", "tipo": "Equipamentos", "status": "Em execução", "data": "2023-11-30", "ano": 2023, "periodo": "2023 Q3", "indicado": 169599.0, "pago": 162000.0, "saldo": 7599.0, "consultor": "Diego Dias"},
-  {"id": "947237", "cnpj": "05877609000167", "parlamentar": "Nelson Barbudo", "cargo": "Deputado Federal", "esfera": "Federal", "tipo": "Equipamentos", "status": "Em execução", "data": "2023-11-27", "ano": 2023, "periodo": "2023 Q3", "indicado": 2274213.0, "pago": 1766770.0, "saldo": 507443.0, "consultor": "Diego Dias"},
-  {"id": "971183", "cnpj": "60992427002270", "parlamentar": "Simone Marquetto", "cargo": "Deputado Federal", "esfera": "Federal", "tipo": "Equipamentos", "status": "Em execução", "data": "2025-10-17", "ano": 2024, "periodo": "2025 Q3", "indicado": 910931.0, "pago": 0, "saldo": 910931.0, "consultor": "Diego Dias"},
-  {"id": "966771", "cnpj": "60992427002270", "parlamentar": "Simone Marquetto", "cargo": "Deputado Federal", "esfera": "Federal", "tipo": "Equipamentos", "status": "Em execução", "data": "2025-10-30", "ano": 2024, "periodo": "2025 Q3", "indicado": 388975.0, "pago": 0, "saldo": 388975.0, "consultor": "Diego Dias"},
-  {"id": "947189", "cnpj": "54384631000261", "parlamentar": "Guiga Peixoto", "cargo": "Deputado Federal", "esfera": "Federal", "tipo": "Equipamentos", "status": "Em execução", "data": "2023-11-20", "ano": 2023, "periodo": "2023 Q3", "indicado": 1001022.0, "pago": 89300.0, "saldo": 815000.0, "consultor": "Diego Dias"},
-  {"id": "947185", "cnpj": "54384631000261", "parlamentar": "Eduardo Bolsonaro", "cargo": "Deputado Federal", "esfera": "Federal", "tipo": "Equipamentos", "status": "Em execução", "data": "2023-11-17", "ano": 2023, "periodo": "2023 Q3", "indicado": 600452.0, "pago": 287989.81, "saldo": 332848.0, "consultor": "Diego Dias"},
-  {"id": "944576", "cnpj": "54384631000261", "parlamentar": "José Serra", "cargo": "Senador", "esfera": "Federal", "tipo": "Equipamentos", "status": "Em execução", "data": "2023-11-17", "ano": 2023, "periodo": "2023 Q3", "indicado": 1504491.0, "pago": 637518.25, "saldo": 653000.0, "consultor": "Diego Dias"},
-  {"id": "944122", "cnpj": "54384631000261", "parlamentar": "Nilto Tatto", "cargo": "Deputado Federal", "esfera": "Federal", "tipo": "Equipamentos", "status": "Prestação de Contas em Análise", "data": "2023-11-17", "ano": 2023, "periodo": "2023 Q3", "indicado": 151499.0, "pago": 135286.47, "saldo": 16212.529999999999, "consultor": "Valter Rotter"},
-  {"id": "961434", "cnpj": "54384631000261", "parlamentar": "Ricardo Salles", "cargo": "Deputado Federal", "esfera": "Federal", "tipo": "Equipamentos", "status": "Prestação de Contas em Análise", "data": "2024-12-16", "ano": 2024, "periodo": "2024 Q3", "indicado": 502938.0, "pago": 498546.57, "saldo": 4391.429999999993, "consultor": "Valter Rotter"},
-  {"id": "979738", "cnpj": "54384631000261", "parlamentar": "Adriana Ventura", "cargo": "Deputado Federal", "esfera": "Federal", "tipo": "Equipamentos", "status": "Em execução", "data": "2025-10-14", "ano": 2025, "periodo": "2025 Q3", "indicado": 500000.0, "pago": 0, "saldo": 500000.0, "consultor": "Diego Dias"},
-  {"id": "987994", "cnpj": "54384631000261", "parlamentar": "Ricardo Salles", "cargo": "Deputado Federal", "esfera": "Federal", "tipo": "Equipamentos", "status": "Em execução", "data": "2025-12-11", "ano": 2025, "periodo": "2025 Q3", "indicado": 1999994.0, "pago": 0, "saldo": 1999994.0, "consultor": "Diego Dias"},
-  {"id": "961444", "cnpj": "54384631000261", "parlamentar": "Adriana Ventura", "cargo": "Deputado Federal", "esfera": "Federal", "tipo": "Equipamentos", "status": "Em execução", "data": "2024-12-16", "ano": 2024, "periodo": "2024 Q3", "indicado": 498712.0, "pago": 0, "saldo": 498712.0, "consultor": "Diego Dias"},
-  {"id": "961435", "cnpj": "54384631000261", "parlamentar": "Vicentinho", "cargo": "Deputado Federal", "esfera": "Federal", "tipo": "Equipamentos", "status": "Em execução", "data": "2024-12-16", "ano": 2024, "periodo": "2024 Q3", "indicado": 202144.0, "pago": 51645.59, "saldo": 142315.92, "consultor": "Diego Dias"},
-  {"id": "942680", "cnpj": "54384631000261", "parlamentar": "Guilherme Derrite", "cargo": "Deputado Federal", "esfera": "Federal", "tipo": "Equipamentos", "status": "Prestação de Contas em Análise", "data": "2023-11-13", "ano": 2023, "periodo": "2023 Q3", "indicado": 176350.0, "pago": 176350.0, "saldo": 0, "consultor": "Valter Rotter"},
-  {"id": "961616", "cnpj": "45484383000159", "parlamentar": "Simone Marquetto", "cargo": "Deputado Federal", "esfera": "Federal", "tipo": "Equipamentos", "status": "Em execução", "data": "2024-12-12", "ano": 2024, "periodo": "2024 Q3", "indicado": 500000.0, "pago": 0, "saldo": 500000.0, "consultor": "Diego Dias"},
-  {"id": "980098", "cnpj": "45484383000159", "parlamentar": "Juliana Cardoso", "cargo": "Deputado Federal", "esfera": "Federal", "tipo": "Equipamentos", "status": "Em execução", "data": "2025-10-23", "ano": 2025, "periodo": "2025 Q3", "indicado": 250000.0, "pago": 0, "saldo": 250000.0, "consultor": "Diego Dias"},
-  {"id": "929780", "cnpj": "60992427001893", "parlamentar": "Coronel Tadeu", "cargo": "Deputado Federal", "esfera": "Federal", "tipo": "Equipamentos", "status": "Prestação de Contas Em Análise", "data": "2022-07-20", "ano": 2022, "periodo": "2022 Q2", "indicado": 200000.0, "pago": 189525.0, "saldo": 10475.0, "consultor": "Valter Rotter"},
-  {"id": "961450", "cnpj": "60992427001893", "parlamentar": "Simone Marquetto", "cargo": "Deputado Federal", "esfera": "Federal", "tipo": "Equipamentos", "status": "Em execução", "data": "2024-12-27", "ano": 2024, "periodo": "2024 Q3", "indicado": 500730.0, "pago": 0, "saldo": 500730.0, "consultor": "Diego Dias"},
-  {"id": "980096", "cnpj": "60992427001893", "parlamentar": "Alexandre Leite", "cargo": "Deputado Federal", "esfera": "Federal", "tipo": "Equipamentos", "status": "Em execução", "data": "2025-11-04", "ano": 2025, "periodo": "2025 Q3", "indicado": 300000.0, "pago": 0, "saldo": 300000.0, "consultor": "Diego Dias"},
-  {"id": "883474", "cnpj": "60945854000172", "parlamentar": "Arnaldo Faria de Sá", "cargo": "Deputado Federal", "esfera": "Federal", "tipo": "Equipamentos", "status": "Prestação de Contas Concluída", "data": "2019-09-18", "ano": 2019, "periodo": "2019 Q3", "indicado": 300000.0, "pago": 191000.0, "saldo": 109000.0, "consultor": "Valter Rotter"},
-  {"id": "937212", "cnpj": "60945854000172", "parlamentar": "Vinicius Poit", "cargo": "Deputado Federal", "esfera": "Federal", "tipo": "Equipamentos", "status": "Prestação de Contas Iniciada por Antecipação", "data": "2022-12-20", "ano": 2019, "periodo": "2019 Q3", "indicado": 158515.0, "pago": 69646.41, "saldo": 88868.59, "consultor": "Valter Rotter"},
-  {"id": "961625", "cnpj": "60945854000172", "parlamentar": "Adriana Ventura", "cargo": "Deputado Federal", "esfera": "Federal", "tipo": "Equipamentos", "status": "Em execução", "data": "2024-05-27", "ano": 2024, "periodo": "2024 Q2", "indicado": 380168.0, "pago": 228034.75, "saldo": 147412.25, "consultor": "Diego Dias"},
-  {"id": "944599", "cnpj": "60945854000172", "parlamentar": "Policial Katia Sastre", "cargo": "Deputado Federal", "esfera": "Federal", "tipo": "Equipamentos", "status": "Em execução", "data": "2023-06-16", "ano": 2023, "periodo": "2023 Q2", "indicado": 1183698.0, "pago": 861752.91, "saldo": 321945.08999999997, "consultor": "Diego Dias"},
-  {"id": "946563", "cnpj": "60945854000172", "parlamentar": "Policial Katia Sastre", "cargo": "Deputado Federal", "esfera": "Federal", "tipo": "Equipamentos", "status": "Em execução", "data": "2023-08-24", "ano": 2023, "periodo": "2023 Q2", "indicado": 188846.0, "pago": 109369.84, "saldo": 77230.16, "consultor": "Diego Dias"},
-  {"id": "942664", "cnpj": "60945854000172", "parlamentar": "Orlando Silva", "cargo": "Deputado Federal", "esfera": "Federal", "tipo": "Equipamentos", "status": "Em execução", "data": "2023-06-16", "ano": 2023, "periodo": "2023 Q2", "indicado": 400342.0, "pago": 265748.78, "saldo": 134251.22, "consultor": "Diego Dias"},
-  {"id": "942657", "cnpj": "60945854000172", "parlamentar": "Tiririca", "cargo": "Deputado Federal", "esfera": "Federal", "tipo": "Equipamentos", "status": "Em execução", "data": "2023-06-16", "ano": 2023, "periodo": "2023 Q2", "indicado": 400872.0, "pago": 33391.82, "saldo": 366608.18, "consultor": "Diego Dias"},
-  {"id": "942653", "cnpj": "60945854000172", "parlamentar": "David Soares", "cargo": "Deputado Federal", "esfera": "Federal", "tipo": "Equipamentos", "status": "Em execução", "data": "2023-06-16", "ano": 2023, "periodo": "2023 Q2", "indicado": 355655.0, "pago": 0, "saldo": 355655.0, "consultor": "Diego Dias"},
-  {"id": "944150", "cnpj": "60945854000172", "parlamentar": "Vinicius Carvalho", "cargo": "Deputado Federal", "esfera": "Federal", "tipo": "Equipamentos", "status": "Em execução", "data": "2023-06-15", "ano": 2023, "periodo": "2023 Q2", "indicado": 254320.0, "pago": 248161.76, "saldo": 6158.239999999991, "consultor": "Diego Dias"},
-  {"id": "954419", "cnpj": "60945854000172", "parlamentar": "Vicentinho", "cargo": "Deputado Federal", "esfera": "Federal", "tipo": "Equipamentos", "status": "Prestação de Contas Iniciada por Antecipação", "data": "2023-12-27", "ano": 2023, "periodo": "2023 Q3", "indicado": 214823.0, "pago": 95241.2, "saldo": 119581.8, "consultor": "Valter Rotter"},
-  {"id": "919921", "cnpj": "60945854000173", "parlamentar": "Vicentinho", "cargo": "Deputado Federal", "esfera": "Federal", "tipo": "Equipamentos", "status": "Prestação de Contas em Análise", "data": "2021-11-29", "ano": 2021, "periodo": "2023 Q3", "indicado": 251165.0, "pago": 152489.4, "saldo": 98675.6, "consultor": "Valter Rotter"},
-  {"id": "839899", "cnpj": "44563716000172", "parlamentar": "Capitão Augusto", "cargo": "Deputado Federal", "esfera": "Federal", "tipo": "Reforma", "status": "Prestação de Contas Concluída", "data": "2016-12-13", "ano": 2016, "periodo": "2016 Q3", "indicado": 245003.82, "pago": 245003.82, "saldo": 0, "consultor": "Valter Rotter"},
-  {"id": "848591", "cnpj": "44563716000172", "parlamentar": "Milton Monti", "cargo": "Deputado Federal", "esfera": "Federal", "tipo": "Equipamentos", "status": "Prestação de Contas Concluída", "data": "2017-12-12", "ano": 2017, "periodo": "2017 Q3", "indicado": 300500.0, "pago": 289840.0, "saldo": 10660.0, "consultor": "Valter Rotter"},
-  {"id": "935227", "cnpj": "25333751000150", "parlamentar": "Rosana Valle", "cargo": "Deputado Federal", "esfera": "Federal", "tipo": "Equipamentos", "status": "Prestação de Contas em Análise", "data": "2022-10-18", "ano": 2022, "periodo": "2022 Q3", "indicado": 399000.0, "pago": 398600.0, "saldo": 400.0, "consultor": "Valter Rotter"},
-  {"id": "971411", "cnpj": "25333751000150", "parlamentar": "Paulo Alexandre Barbosa", "cargo": "Deputado Federal", "esfera": "Federal", "tipo": "Equipamentos", "status": "Em execução", "data": "2024-12-28", "ano": 2024, "periodo": "2024 Q3", "indicado": 445100.0, "pago": 0, "saldo": 445100.0, "consultor": "Diego Dias"},
-  {"id": "918033", "cnpj": "45615309000124", "parlamentar": "Relator Geral", "cargo": "-", "esfera": "Federal", "tipo": "Equipamentos", "status": "Prestação de Contas em Análise", "data": "2021-11-17", "ano": 2021, "periodo": "2021 Q3", "indicado": 305373.0, "pago": 168299.41, "saldo": 137073.59, "consultor": "Valter Rotter"},
-  {"id": "971174", "cnpj": "45615309000124", "parlamentar": "Alexandre Leite", "cargo": "Deputado Federal", "esfera": "Federal", "tipo": "Equipamentos", "status": "Prestação de contas em Análise", "data": "2024-12-28", "ano": 2024, "periodo": "2024 Q3", "indicado": 735717.0, "pago": 699000.0, "saldo": 36717.0, "consultor": "Valter Rotter"},
-  {"id": "944601", "cnpj": "45615309000124", "parlamentar": "General Peternelli", "cargo": "Deputado Federal", "esfera": "Federal", "tipo": "Equipamentos", "status": "Prestação de contas em Análise", "data": "2023-12-28", "ano": 2023, "periodo": "2023 Q3", "indicado": 129800.0, "pago": 101000.0, "saldo": 28800.0, "consultor": "Valter Rotter"},
-  {"id": "988156", "cnpj": "45615309000124", "parlamentar": "Saulo Pedroso", "cargo": "Deputado Federal", "esfera": "Federal", "tipo": "Equipamentos", "status": "Em execução", "data": "2025-12-11", "ano": 2025, "periodo": "2025 Q3", "indicado": 550000.0, "pago": 0, "saldo": 550000.0, "consultor": "Diego Dias"},
-  {"id": "989470", "cnpj": "45615309000124", "parlamentar": "Renata Abreu", "cargo": "Deputado Federal", "esfera": "Federal", "tipo": "Equipamentos", "status": "Em execução", "data": "2025-12-19", "ano": 2025, "periodo": "2025 Q3", "indicado": 200000.0, "pago": 0, "saldo": 200000.0, "consultor": "Diego Dias"},
-  {"id": "919498", "cnpj": "07273592000164", "parlamentar": "Bancada do Ceara", "cargo": "-", "esfera": "Federal", "tipo": "Equipamentos", "status": "Prestação de Contas em Análise", "data": "2021-12-17", "ano": 2021, "periodo": "2021 Q3", "indicado": 199814.0, "pago": 152423.0, "saldo": 47391.0, "consultor": "Valter Rotter"},
-  {"id": "946462", "cnpj": "07273592000164", "parlamentar": "Eduardo Girão", "cargo": "Senador", "esfera": "Federal", "tipo": "Equipamentos", "status": "Em execução", "data": "2023-12-26", "ano": 2023, "periodo": "2023 Q3", "indicado": 700000.0, "pago": 375900.0, "saldo": 287500.0, "consultor": "Diego Dias"},
-  {"id": "824135", "cnpj": "07273592000164", "parlamentar": "Relator Geral", "cargo": "-", "esfera": "Federal", "tipo": "Equipamentos", "status": "Em execução", "data": "2016-02-03", "ano": 2015, "periodo": "2016 Q1", "indicado": 3517576.88, "pago": 2487362.79, "saldo": 1030214.0899999999, "consultor": "Diego Dias"},
-  {"id": "898739", "cnpj": "43964931000112", "parlamentar": "Vanderlei Macris", "cargo": "Deputado Federal", "esfera": "Federal", "tipo": "Equipamentos", "status": "Em execução", "data": "2020-12-23", "ano": 2020, "periodo": "2020 Q3", "indicado": 200000.0, "pago": 141000.0, "saldo": 45050.0, "consultor": "Diego Dias"},
-  {"id": "858391", "cnpj": "43964931000112", "parlamentar": "Roberto Alves", "cargo": "Deputado Federal", "esfera": "Federal", "tipo": "Equipamentos", "status": "Em execução", "data": "2017-12-18", "ano": 2017, "periodo": "2017 Q3", "indicado": 250000.0, "pago": 0, "saldo": 250000.0, "consultor": "Diego Dias"},
-  {"id": "883490", "cnpj": "43964931000112", "parlamentar": "Vanderlei Macris", "cargo": "Deputado Federal", "esfera": "Federal", "tipo": "Equipamentos", "status": "Em execução", "data": "2019-08-23", "ano": 2019, "periodo": "2019 Q2", "indicado": 250000.0, "pago": 0, "saldo": 250000.0, "consultor": "Diego Dias"},
-  {"id": "883481", "cnpj": "43964931000112", "parlamentar": "Baleia Rossi", "cargo": "Deputado Federal", "esfera": "Federal", "tipo": "Equipamentos", "status": "Em execução", "data": "2019-08-23", "ano": 2019, "periodo": "2019 Q2", "indicado": 200000.0, "pago": 0, "saldo": 200000.0, "consultor": "Diego Dias"},
-  {"id": "949536", "cnpj": "43964931000112", "parlamentar": "Baleia Rossi", "cargo": "Deputado Federal", "esfera": "Federal", "tipo": "Equipamentos", "status": "Em execução", "data": "2023-12-21", "ano": 2023, "periodo": "2023 Q3", "indicado": 260512.0, "pago": 0, "saldo": 260512.0, "consultor": "Diego Dias"},
-  {"id": "989472", "cnpj": "43964931000112", "parlamentar": "Baleia Rossi", "cargo": "Deputado Federal", "esfera": "Federal", "tipo": "Equipamentos", "status": "Em execução", "data": "2025-12-22", "ano": 2025, "periodo": "2025 Q3", "indicado": 216136.0, "pago": 0, "saldo": 216136.0, "consultor": "Diego Dias"},
-  {"id": "961629", "cnpj": "48662167000144", "parlamentar": "Carlos Sampaio", "cargo": "Deputado Federal", "esfera": "Federal", "tipo": "Equipamentos", "status": "Em execução", "data": "2024-12-16", "ano": 2024, "periodo": "2024 Q3", "indicado": 500000.0, "pago": 499198.0, "saldo": 802.0, "consultor": "Diego Dias"},
-  {"id": "883519", "cnpj": "52739950000136", "parlamentar": "Baleia Rossi", "cargo": "Deputado Federal", "esfera": "Federal", "tipo": "Equipamentos", "status": "Prestação de Contas Iniciada por Antecipação", "data": "2019-12-16", "ano": 2019, "periodo": "2019 Q3", "indicado": 209300.0, "pago": 204692.85, "saldo": 4607.149999999994, "consultor": "Valter Rotter"},
-  {"id": "971182", "cnpj": "52739950000136", "parlamentar": "Professora Luciene Cavalcante", "cargo": "Deputado Federal", "esfera": "Federal", "tipo": "Equipamentos", "status": "Em execução", "data": "2024-12-30", "ano": 2024, "periodo": "2024 Q3", "indicado": 1000000.0, "pago": 0, "saldo": 1000000.0, "consultor": "Diego Dias"},
-  {"id": "954420", "cnpj": "54370630000187", "parlamentar": "-", "cargo": "-", "esfera": "Federal", "tipo": "Equipamentos", "status": "Em execução", "data": "2024-01-09", "ano": 2024, "periodo": "2024Q1", "indicado": 9434738.05, "pago": 7948269.13, "saldo": 1486468.8, "consultor": "Diego Dias"},
-  {"id": "944156", "cnpj": "54370630000187", "parlamentar": "Adriana Ventura", "cargo": "Deputado Federal", "esfera": "Federal", "tipo": "Equipamentos", "status": "Em execução", "data": "2023-11-17", "ano": 2023, "periodo": "2023Q3", "indicado": 399996.0, "pago": 373125.87, "saldo": 26870.130000000005, "consultor": "Diego Dias"},
-  {"id": "961697", "cnpj": "54370630000187", "parlamentar": "Rosângela Moro", "cargo": "Deputado Federal", "esfera": "Federal", "tipo": "Equipamentos", "status": "Prestação de Contas em Análise", "data": "2024-12-13", "ano": 2024, "periodo": "2024Q3", "indicado": 504694.0, "pago": 422796.77, "saldo": 81897.22999999998, "consultor": "Valter Rotter"},
-  {"id": "961699", "cnpj": "54370630000187", "parlamentar": "Vicentinho", "cargo": "Deputado Federal", "esfera": "Federal", "tipo": "Equipamentos", "status": "Prestação de Contas em Análise", "data": "2024-12-13", "ano": 2024, "periodo": "2024Q3", "indicado": 207024.0, "pago": 165071.77, "saldo": 41952.23000000001, "consultor": "Valter Rotter"},
-  {"id": "988867", "cnpj": "54370630000187", "parlamentar": "Rosângela Moro", "cargo": "Deputado Federal", "esfera": "Federal", "tipo": "Equipamentos", "status": "Em execução", "data": "2025-12-17", "ano": 2025, "periodo": "2025Q3", "indicado": 483586.0, "pago": 0, "saldo": 424623.16, "consultor": "Diego Dias"},
-  {"id": "905515", "cnpj": "56384183000140", "parlamentar": "-", "cargo": "-", "esfera": "Federal", "tipo": "Equipamentos", "status": "Prestação de Contas em Análise", "data": "2020-12-30", "ano": 2020, "periodo": "2020 Q3", "indicado": 100000.0, "pago": 59231.5, "saldo": 40768.5, "consultor": "Valter Rotter"},
-  {"id": "900783", "cnpj": "56384183000140", "parlamentar": "Alexis Fonteyne", "cargo": "Deputado Federal", "esfera": "Federal", "tipo": "Equipamentos", "status": "Prestação de Contas Concluída", "data": "2020-12-30", "ano": 2020, "periodo": "2020 Q3", "indicado": 220000.0, "pago": 190888.0, "saldo": 29112.0, "consultor": "Valter Rotter"},
-  {"id": "877848", "cnpj": "56384183000140", "parlamentar": "Antonio Carlos Mendes Thame", "cargo": "Deputado Federal", "esfera": "Federal", "tipo": "Equipamentos", "status": "Prestação de Contas Concluída", "data": "2018-09-17", "ano": 2018, "periodo": "2018 Q3", "indicado": 450000.0, "pago": 393840.55, "saldo": 56159.45000000001, "consultor": "Valter Rotter"},
-  {"id": "961701", "cnpj": "56384183000140", "parlamentar": "Alexandre Leite", "cargo": "Deputado Federal", "esfera": "Federal", "tipo": "Equipamentos", "status": "Em execução", "data": "2024-12-20", "ano": 2024, "periodo": "2024 Q3", "indicado": 299994.0, "pago": 0, "saldo": 299994.0, "consultor": "Diego Dias"},
-  {"id": "945697", "cnpj": "56384183000140", "parlamentar": "Baleia Rossi", "cargo": "Deputado Federal", "esfera": "Federal", "tipo": "Equipamentos", "status": "Em execução", "data": "2023-12-06", "ano": 2023, "periodo": "2023 Q3", "indicado": 570000.0, "pago": 0, "saldo": 570000.0, "consultor": "Diego Dias"},
-  {"id": "925614", "cnpj": "56384183000140", "parlamentar": "Vinicius Poit", "cargo": "Deputado Federal", "esfera": "Federal", "tipo": "Equipamentos", "status": "Em execução", "data": "2021-12-31", "ano": 2021, "periodo": "2021 Q3", "indicado": 500000.0, "pago": 0, "saldo": 500000.0, "consultor": "Diego Dias"},
-  {"id": "987997", "cnpj": "56384183000140", "parlamentar": "Adriana Ventura", "cargo": "Deputado Federal", "esfera": "Federal", "tipo": "Equipamentos", "status": "Em execução", "data": "2025-12-11", "ano": 2025, "periodo": "2025 Q3", "indicado": 557326.0, "pago": 0, "saldo": 557326.0, "consultor": "Diego Dias"},
-  {"id": "950105", "cnpj": "60332673000170", "parlamentar": "Rodrigo Agostinho", "cargo": "Deputado Federal", "esfera": "Federal", "tipo": "Equipamentos", "status": "Prestação de Contas Em Análise", "data": "2023-12-29", "ano": 2023, "periodo": "2023 Q3", "indicado": 100000.0, "pago": 97250.0, "saldo": 2750.0, "consultor": "Valter Rotter"},
-  {"id": "985154", "cnpj": "60332673000170", "parlamentar": "Ricardo Salles", "cargo": "Deputado Federal", "esfera": "Federal", "tipo": "Equipamentos", "status": "Em execução", "data": "2025-12-01", "ano": 2025, "periodo": "2025 Q3", "indicado": 2500000.0, "pago": 0, "saldo": 2500000.0, "consultor": "Diego Dias"},
-  {"id": "877473", "cnpj": "55189930000127", "parlamentar": "Lobbe Neto", "cargo": "Deputado Federal", "esfera": "Federal", "tipo": "Equipamentos", "status": "Prestação de Contas Concluída", "data": "2018-09-20", "ano": 2018, "periodo": "2018 Q3", "indicado": 150000.0, "pago": 149923.0, "saldo": 77.0, "consultor": "Valter Rotter"},
-  {"id": "921299", "cnpj": "55189930000127", "parlamentar": "Relator Geral", "cargo": "-", "esfera": "Federal", "tipo": "Equipamentos", "status": "Em execução", "data": "2021-12-30", "ano": 2021, "periodo": "2021 Q3", "indicado": 254450.0, "pago": 0, "saldo": 254450.0, "consultor": "Diego Dias"},
-  {"id": "949542", "cnpj": "55189930000127", "parlamentar": "Baleia Rossi", "cargo": "Deputado Federal", "esfera": "Federal", "tipo": "Equipamentos", "status": "Prestação de Contas Iniciada por Antecipação", "data": "2023-12-05", "ano": 2023, "periodo": "2023 Q3", "indicado": 500769.0, "pago": 475900.0, "saldo": 24869.0, "consultor": "Valter Rotter"},
-  {"id": "988201", "cnpj": "55189930000127", "parlamentar": "Baleia Rossi", "cargo": "Deputado Federal", "esfera": "Federal", "tipo": "Equipamentos", "status": "Em execução", "data": "2025-12-12", "ano": 2025, "periodo": "2025 Q3", "indicado": 503745.0, "pago": 0, "saldo": 503745.0, "consultor": "Diego Dias"},
-  {"id": "891077", "cnpj": "19446590000109", "parlamentar": "Diego Andrade", "cargo": "Deputado Federal", "esfera": "Federal", "tipo": "Equipamentos", "status": "Em execução", "data": "2019-12-18", "ano": 2019, "periodo": "2019 Q3", "indicado": 159750.0, "pago": 0, "saldo": 159750.0, "consultor": "Diego Dias"},
-  {"id": "944054", "cnpj": "19446590000109", "parlamentar": "-", "cargo": "-", "esfera": "Federal", "tipo": "Equipamentos", "status": "Em execução", "data": "2023-11-23", "ano": 2023, "periodo": "2023 Q3", "indicado": 300169.0, "pago": 0, "saldo": 300169.0, "consultor": "Diego Dias"},
-  {"id": "944163", "cnpj": "47235130000177", "parlamentar": "Renata Abreu", "cargo": "Deputado Federal", "esfera": "Federal", "tipo": "Equipamentos", "status": "Prestação de Contas Iniciada por Antecipação", "data": "2023-12-06", "ano": 2023, "periodo": "2023 Q3", "indicado": 798656.0, "pago": 704991.23, "saldo": 93664.77000000002, "consultor": "Valter Rotter"},
-  {"id": "914248", "cnpj": "47235130000177", "parlamentar": "Guiga Peixoto", "cargo": "Deputado Federal", "esfera": "Federal", "tipo": "Equipamentos", "status": "Prestação de Contas em Análise", "data": "2021-09-09", "ano": 2021, "periodo": "2021 Q3", "indicado": 108249.0, "pago": 80189.0, "saldo": 28060.0, "consultor": "Valter Rotter"},
-  {"id": "868391", "cnpj": "73027690000146", "parlamentar": "Walter Ihoshi", "cargo": "Deputado Federal", "esfera": "Federal", "tipo": "Equipamentos", "status": "Prestação de Contas Concluída", "data": "2018-07-24", "ano": 2018, "periodo": "2018 Q2", "indicado": 100070.0, "pago": 99114.0, "saldo": 956.0, "consultor": "Valter Rotter"},
-  {"id": "888746", "cnpj": "73027690000146", "parlamentar": "Capitão Augusto", "cargo": "Deputado Federal", "esfera": "Federal", "tipo": "Equipamentos", "status": "Prestação de Contas Concluída", "data": "2019-12-09", "ano": 2019, "periodo": "2019 Q3", "indicado": 100100.0, "pago": 70219.56, "saldo": 29880.440000000002, "consultor": "Valter Rotter"},
-  {"id": "941561", "cnpj": "73027690000146", "parlamentar": "Abou Anni", "cargo": "Deputado Federal", "esfera": "Federal", "tipo": "Reforma", "status": "Em execução", "data": "2023-12-06", "ano": 2023, "periodo": "2023 Q3", "indicado": 960563.0, "pago": 0, "saldo": 960563.0, "consultor": "Diego Dias"},
-  {"id": "905518", "cnpj": "54022967000101", "parlamentar": "Vitor Lippi", "cargo": "Deputado Federal", "esfera": "Federal", "tipo": "Equipamentos", "status": "Prestação de Contas em Análise", "data": "2020-12-18", "ano": 2020, "periodo": "2020 Q3", "indicado": 250653.0, "pago": 235573.85, "saldo": 15079.149999999994, "consultor": "Valter Rotter"},
-  {"id": "930142", "cnpj": "54022967000101", "parlamentar": "Guilherme Mussi", "cargo": "Deputado Federal", "esfera": "Federal", "tipo": "Equipamentos", "status": "Prestação de Contas em Análise", "data": "2022-08-25", "ano": 2022, "periodo": "2022 Q2", "indicado": 200578.0, "pago": 189183.93, "saldo": 11394.070000000007, "consultor": "Valter Rotter"},
-  {"id": "971209", "cnpj": "54022967000101", "parlamentar": "Vicentinho", "cargo": "Deputado Federal", "esfera": "Federal", "tipo": "Equipamentos", "status": "Em execução", "data": "2024-12-28", "ano": 2024, "periodo": "2024 Q3", "indicado": 350552.0, "pago": 0, "saldo": 350552.0, "consultor": "Diego Dias"},
-  {"id": "950110", "cnpj": "54022967000101", "parlamentar": "Alexandre Leite", "cargo": "Deputado Federal", "esfera": "Federal", "tipo": "Equipamentos", "status": "Em execução", "data": "2023-12-14", "ano": 2023, "periodo": "2023 Q3", "indicado": 250000.0, "pago": 0, "saldo": 250000.0, "consultor": "Diego Dias"},
-  {"id": "886431", "cnpj": "54022967000101", "parlamentar": "Vitor Lippi", "cargo": "Deputado Federal", "esfera": "Federal", "tipo": "Equipamentos", "status": "Prestação de Contas em Complementação", "data": "2019-12-16", "ano": 2019, "periodo": "2019 Q3", "indicado": 800000.0, "pago": 670664.94, "saldo": 129335.06000000006, "consultor": "Valter Rotter"},
-  {"id": "868399", "cnpj": "54022967000101", "parlamentar": "Vitor Lippi", "cargo": "Deputado Federal", "esfera": "Federal", "tipo": "Equipamentos", "status": "Prestação de Contas Concluída", "data": "2018-08-21", "ano": 2018, "periodo": "2018 Q2", "indicado": 700200.0, "pago": 550422.0, "saldo": 149778.0, "consultor": "Valter Rotter"},
-  {"id": "904842", "cnpj": "55344337000108", "parlamentar": "Sâmia Bomfim", "cargo": "Deputado Federal", "esfera": "Federal", "tipo": "Equipamentos", "status": "Prestação de Contas Concluída", "data": "2020-12-18", "ano": 2020, "periodo": "2020 Q3", "indicado": 650000.0, "pago": 519050.0, "saldo": 130950.0, "consultor": "Valter Rotter"},
-  {"id": "914090", "cnpj": "55344337000108", "parlamentar": "Alexis Fonteyne", "cargo": "Deputado Federal", "esfera": "Federal", "tipo": "Equipamentos", "status": "Prestação de Contas em Análise", "data": "2021-12-16", "ano": 2021, "periodo": "2021 Q3", "indicado": 258218.0, "pago": 256300.0, "saldo": 1918.0, "consultor": "Valter Rotter"},
-  {"id": "935400", "cnpj": "55344337000108", "parlamentar": "Sâmia Bomfim", "cargo": "Deputado Federal", "esfera": "Federal", "tipo": "Equipamentos", "status": "Prestação de Contas em Análise", "data": "2022-10-26", "ano": 2022, "periodo": "2022 Q3", "indicado": 400186.0, "pago": 349149.36, "saldo": 51036.640000000014, "consultor": "Valter Rotter"},
-  {"id": "842657", "cnpj": "55344337000108", "parlamentar": "Com. Defesa Direitos das Pessoas com Deficiência", "cargo": "-", "esfera": "Federal", "tipo": "Reforma", "status": "Prestação de Contas Concluída", "data": "2016-12-31", "ano": 2016, "periodo": "2016 Q3", "indicado": 862472.39, "pago": 859234.1, "saldo": 3238.2900000000373, "consultor": "Valter Rotter"},
-  {"id": "962411", "cnpj": "55344337000108", "parlamentar": "Marangoni", "cargo": "Deputado Federal", "esfera": "Federal", "tipo": "Equipamentos", "status": "Prestação de Contas em Análise", "data": "2024-12-30", "ano": 2024, "periodo": "2024 Q3", "indicado": 233750.0, "pago": 205064.0, "saldo": 28686.0, "consultor": "Valter Rotter"},
-  {"id": "947384", "cnpj": "55344337000108", "parlamentar": "Adriana Ventura", "cargo": "Deputado Federal", "esfera": "Federal", "tipo": "Equipamentos", "status": "Prestação de Contas em Análise", "data": "2023-11-23", "ano": 2023, "periodo": "2023 Q3", "indicado": 501035.0, "pago": 360941.6, "saldo": 140093.40000000002, "consultor": "Valter Rotter"},
-  {"id": "904843", "cnpj": "56725385000109", "parlamentar": "Vanderlei Macris", "cargo": "Deputado Federal", "esfera": "Federal", "tipo": "Equipamentos", "status": "Prestação de Contas Em Análise", "data": "2020-12-10", "ano": 2020, "periodo": "2020 Q3", "indicado": 331000.0, "pago": 0, "saldo": 331000.0, "consultor": "Valter Rotter"},
-  {"id": "971210", "cnpj": "56725385000109", "parlamentar": "Alexandre Leite", "cargo": "Deputado Federal", "esfera": "Federal", "tipo": "Equipamentos", "status": "Em execução", "data": "2025-09-02", "ano": 2024, "periodo": "2025 Q3", "indicado": 453774.0, "pago": 0, "saldo": 453774.0, "consultor": "Diego Dias"},
-  {"id": "961302", "cnpj": "07818313000796", "parlamentar": "Eduardo Girão", "cargo": "Senador", "esfera": "Federal", "tipo": "Equipamentos", "status": "Em execução", "data": "2025-04-29", "ano": 2024, "periodo": "2025 Q1", "indicado": 599824.0, "pago": 0, "saldo": 599824.0, "consultor": "Diego Dias"},
-  {"id": "898759", "cnpj": "72457716000123", "parlamentar": "Guiga Peixoto", "cargo": "Deputado Federal", "esfera": "Federal", "tipo": "Equipamentos", "status": "Prestação de Contas Em Análise", "data": "2020-12-18", "ano": 2020, "periodo": "2020 Q3", "indicado": 100007.0, "pago": 66943.0, "saldo": 33064.0, "consultor": "Valter Rotter"},
-  {"id": "883493", "cnpj": "72457716000123", "parlamentar": "Major Olimpio", "cargo": "Deputado Federal", "esfera": "Federal", "tipo": "Equipamentos", "status": "Prestação de Contas Concluída", "data": "2019-08-20", "ano": 2019, "periodo": "2019 Q2", "indicado": 200000.0, "pago": 91911.0, "saldo": 108089.0, "consultor": "Valter Rotter"},
-  {"id": "935243", "cnpj": "72457716000123", "parlamentar": "Vanderlei Macris", "cargo": "Deputado Federal", "esfera": "Federal", "tipo": "Equipamentos", "status": "Prestação de Contas em Análise", "data": "2022-09-29", "ano": 2022, "periodo": "2022 Q3", "indicado": 199275.0, "pago": 165434.0, "saldo": 33841.0, "consultor": "Valter Rotter"},
-  {"id": "944611", "cnpj": "72457716000123", "parlamentar": "Guiga Peixoto", "cargo": "Deputado Federal", "esfera": "Federal", "tipo": "Equipamentos", "status": "Em execução", "data": "2023-12-19", "ano": 2023, "periodo": "2023 Q3", "indicado": 1499787.0, "pago": 0, "saldo": 1499787.0, "consultor": "Diego Dias"},
-  {"id": "848569", "cnpj": "72957814000120", "parlamentar": "Celso Russomanno", "cargo": "Deputado Federal", "esfera": "Federal", "tipo": "Equipamentos", "status": "Prestação de Contas Concluída", "data": "2017-12-08", "ano": 2017, "periodo": "2017 Q3", "indicado": 254734.0, "pago": 7300.0, "saldo": 247434.0, "consultor": "Valter Rotter"},
-  {"id": "962413", "cnpj": "72957814000120", "parlamentar": "Adriana Ventura", "cargo": "Deputado Federal", "esfera": "Federal", "tipo": "Equipamentos", "status": "Em execução", "data": "2024-12-10", "ano": 2024, "periodo": "2024 Q3", "indicado": 254779.0, "pago": 208135.95, "saldo": 55490.0, "consultor": "Diego Dias"},
-  {"id": "971213", "cnpj": "72957814000120", "parlamentar": "Celso Russomanno", "cargo": "Deputado Federal", "esfera": "Federal", "tipo": "Equipamentos", "status": "Prestação de Contas em Análise", "data": "2024-12-30", "ano": 2024, "periodo": "2024 Q3", "indicado": 204512.0, "pago": 194976.01, "saldo": 9535.98999999999, "consultor": "Valter Rotter"},
-  {"id": "944174", "cnpj": "72957814000120", "parlamentar": "Celso Russomanno", "cargo": "Deputado Federal", "esfera": "Federal", "tipo": "Equipamentos", "status": "Em execução", "data": "2023-12-13", "ano": 2023, "periodo": "2023 Q3", "indicado": 932158.0, "pago": 831617.12, "saldo": 100540.88, "consultor": "Diego Dias"},
-  {"id": "971215", "cnpj": "54667316000160", "parlamentar": "Simone Marquetto", "cargo": "Deputado Federal", "esfera": "Federal", "tipo": "Equipamentos", "status": "Em execução", "data": "2024-12-30", "ano": 2024, "periodo": "2024 Q3", "indicado": 200002.0, "pago": 185580.0, "saldo": 10002.0, "consultor": "Diego Dias"},
-  {"id": "942677", "cnpj": "54667316000160", "parlamentar": "Vinicius Carvalho", "cargo": "Deputado Federal", "esfera": "Federal", "tipo": "Equipamentos", "status": "Em execução", "data": "2023-11-10", "ano": 2023, "periodo": "2023 Q3", "indicado": 500000.0, "pago": 346460.0, "saldo": 126850.0, "consultor": "Diego Dias"},
-  {"id": "942669", "cnpj": "54667316000160", "parlamentar": "Guiga Peixoto", "cargo": "Deputado Federal", "esfera": "Federal", "tipo": "Equipamentos", "status": "Prestação de Contas Iniciada por Antecipação", "data": "2023-11-10", "ano": 2023, "periodo": "2023 Q3", "indicado": 150000.0, "pago": 144560.0, "saldo": 5440.0, "consultor": "Diego Dias"},
-  {"id": "944180", "cnpj": "54667316000160", "parlamentar": "Vitor Lippi", "cargo": "Deputado Federal", "esfera": "Federal", "tipo": "Equipamentos", "status": "Em execução", "data": "2023-12-13", "ano": 2023, "periodo": "2023 Q3", "indicado": 185443.0, "pago": 178500.0, "saldo": 6943.0, "consultor": "Diego Dias"},
-  {"id": "934313", "cnpj": "54667316000160", "parlamentar": "Arnaldo Jardim", "cargo": "Deputado Federal", "esfera": "Federal", "tipo": "Reforma", "status": "Em execução", "data": "2022-10-31", "ano": 2022, "periodo": "2022 Q3", "indicado": 301110.52, "pago": 299520.0, "saldo": 1590.5200000000186, "consultor": "Diego Dias"},
-  {"id": "944927", "cnpj": "54667316000160", "parlamentar": "Abou Anni", "cargo": "Deputado Federal", "esfera": "Federal", "tipo": "Reforma", "status": "Em execução", "data": "2023-11-30", "ano": 2023, "periodo": "2023 Q3", "indicado": 961316.0, "pago": 961316.0, "saldo": 0, "consultor": "Diego Dias"},
-  {"id": "944926", "cnpj": "54667316000160", "parlamentar": "Abou Anni", "cargo": "Deputado Federal", "esfera": "Federal", "tipo": "Reforma", "status": "Em execução", "data": "2023-11-29", "ano": 2023, "periodo": "2023 Q3", "indicado": 1209828.0, "pago": 1209828.0, "saldo": 0, "consultor": "Diego Dias"},
-  {"id": "988193", "cnpj": "54667316000160", "parlamentar": "Nilto Tatto", "cargo": "Deputado Federal", "esfera": "Federal", "tipo": "Equipamentos", "status": "Em execução", "data": "2025-12-29", "ano": 2025, "periodo": "2025 Q3", "indicado": 200000.0, "pago": 0, "saldo": 200000.0, "consultor": "Diego Dias"},
-  {"id": "929366", "cnpj": "54667316000161", "parlamentar": "Vinicius Carvalho", "cargo": "Deputado Federal", "esfera": "Federal", "tipo": "Equipamentos", "status": "Prestação de Contas em Análise", "data": "2022-06-22", "ano": 2022, "periodo": "2022 Q2", "indicado": 501000.0, "pago": 425815.0, "saldo": 75185.0, "consultor": "Valter Rotter"}
-];
+var CA_DEMO = [];
 /* ═══════════════════════════════════════════════
    NOTIFICATIONS DATA
 ═══════════════════════════════════════════════ */
@@ -1501,7 +1206,7 @@ var CA_NOTIFS = [
 /* ═══════════════════════════════════════════════
    STATE
 ═══════════════════════════════════════════════ */
-var CA_ALL=[],CA_FIL=[],CA_SES=null;
+var CA_ALL=[],CA_FIL=[],CA_SES=null,CA_READY=false;
 var CA_PG=1,CA_PPG=15,CA_SC='data',CA_SD=-1,CA_SQ='';
 var CA_THEME='light';
 
@@ -1571,6 +1276,7 @@ function doLogin(){
   var login=raw.replace(/[^a-z0-9]/gi,'').toLowerCase();
   var senha=pEl.value;
   if(!login||!senha){errT.textContent='Preencha usuário e senha.';err.classList.add('ca-show');return;}
+  if(!CA_READY){errT.textContent='Carregando dados, aguarde alguns segundos…';err.classList.add('ca-show');return;}
   btn.classList.add('ca-load');err.classList.remove('ca-show');
   setTimeout(function(){
     try{
@@ -1696,12 +1402,19 @@ function showKpis(){
    FILTERS
 ═══════════════════════════════════════════════ */
 function popFilters(){
-  var anos={};CA_ALL.forEach(function(r){anos[r.ano]=1;});
-  var sa=el('ca-fano');
-  if(sa){while(sa.options.length>1)sa.remove(1);Object.keys(anos).sort(function(a,b){return b-a;}).forEach(function(a){var o=document.createElement('option');o.value=a;o.textContent=a;sa.appendChild(o);});}
-  var pars={};CA_ALL.forEach(function(r){pars[r.parlamentar]=1;});
-  var sp=el('ca-fpl');
-  if(sp){while(sp.options.length>1)sp.remove(1);Object.keys(pars).sort().forEach(function(p){var o=document.createElement('option');o.value=p;o.textContent=p;sp.appendChild(o);});}
+  function fillSel(id,values,sortFn){
+    var s=el(id);if(!s)return;
+    var cur=s.value;
+    while(s.options.length>1)s.remove(1);
+    values.sort(sortFn||function(a,b){return String(a).localeCompare(String(b),'pt-BR');}).forEach(function(v){var o=document.createElement('option');o.value=v;o.textContent=v;s.appendChild(o);});
+    if(cur && values.indexOf(cur)>=0) s.value=cur;
+  }
+  function uniq(field){var m={};CA_ALL.forEach(function(r){var v=r[field];if(v!==undefined&&v!==null&&v!=='')m[v]=1;});return Object.keys(m);}
+  fillSel('ca-fano',uniq('ano'),function(a,b){return b-a;});
+  fillSel('ca-fpl',uniq('parlamentar'));
+  fillSel('ca-fst',uniq('status'));
+  fillSel('ca-ftp',uniq('tipo'));
+  fillSel('ca-fes',uniq('esfera'));
 }
 function syncFbadge(){var n=['ca-fano','ca-fst','ca-ftp','ca-fes','ca-fpl'].reduce(function(a,id){var e=el(id);return a+(e&&e.value?1:0);},0);var b=el('ca-fbadge');if(b){b.textContent=n;b.classList.toggle('on',n>0);}}
 function applyFilters(){
@@ -1789,7 +1502,13 @@ function drawDonut(id,labels,values,colors,H){
   var e=el(id);if(e){e.innerHTML='';e.appendChild(svg);}
 }
 
-function drawES(){var c={Federal:0,Estadual:0,Municipal:0};CA_FIL.forEach(function(r){if(c[r.esfera]!==undefined)c[r.esfera]++;});drawDonut('ca-es',Object.keys(c),Object.values(c),[CLR.az,CLR.ci,CLR.vd]);}
+function drawES(){
+  var c={};CA_FIL.forEach(function(r){var k=r.esfera||'(sem esfera)';c[k]=(c[k]||0)+1;});
+  var lbs=Object.keys(c);
+  var palette=[CLR.az,CLR.vd,CLR.ci,CLR.go,CLR.pu,CLR.re];
+  var cols=lbs.map(function(_,i){return palette[i%palette.length];});
+  drawDonut('ca-es',lbs,Object.values(c),cols);
+}
 
 function drawST(){
   var c={};CA_FIL.forEach(function(r){c[r.status]=(c[r.status]||0)+1;});
@@ -1823,10 +1542,11 @@ function drawPL(){
 }
 
 function drawTP(){
-  var t={Custeio:0,Investimento:0,Reforma:0};CA_FIL.forEach(function(r){if(t[r.tipo]!==undefined)t[r.tipo]+=r.indicado;});
-  var id='ca-tp';var vals=Object.values(t);
-  if(vals.every(function(v){return v===0;})){noData(id);return;}
-  var lbs=Object.keys(t),cols=[CLR.az,CLR.vd,CLR.go];
+  var t={};CA_FIL.forEach(function(r){var k=r.tipo||'(sem tipo)';t[k]=(t[k]||0)+r.indicado;});
+  var id='ca-tp';var lbs=Object.keys(t),vals=lbs.map(function(k){return t[k];});
+  if(!lbs.length||vals.every(function(v){return v===0;})){noData(id);return;}
+  var palette=[CLR.az,CLR.vd,CLR.go,CLR.pu,CLR.ci,CLR.re];
+  var cols=lbs.map(function(_,i){return palette[i%palette.length];});
   var W=getW(id),H=220,P={t:10,r:14,b:34,l:46},cW=W-P.l-P.r,cH=H-P.t-P.b;
   var bW=cW/lbs.length*0.55,maxV=Math.max.apply(null,vals)*1.1||1;
   var svg=svgEl('svg',{viewBox:'0 0 '+W+' '+H,width:'100%',height:'100%'});
@@ -2090,16 +1810,265 @@ if('serviceWorker' in navigator){
 /* ═══════════════════════════════════════════════
    EVENT LISTENERS
 ═══════════════════════════════════════════════ */
+
+/* ═══════════════════════════════════════════════
+   DYNAMIC DATA LOADER — Google Sheets (CSV)
+═══════════════════════════════════════════════ */
+var CA_SHEET_ID = '13J91Q78jXjErIWnF6sOeplLt8Kz6iIcTkn2MPxyXNmo';
+var CA_SHEET_URL = 'https://docs.google.com/spreadsheets/d/' + CA_SHEET_ID + '/gviz/tq?tqx=out:csv&sheet=Sheet1';
+// Fallback: try first sheet (gid=0) if "Sheet1" doesn't resolve
+var CA_SHEET_URL_FALLBACK = 'https://docs.google.com/spreadsheets/d/' + CA_SHEET_ID + '/gviz/tq?tqx=out:csv&gid=0';
+
+function caParseCSV(text){
+  var rows=[],row=[],cur='',q=false;
+  for(var i=0;i<text.length;i++){
+    var c=text[i];
+    if(q){
+      if(c==='"'){
+        if(text[i+1]==='"'){cur+='"';i++;}
+        else q=false;
+      } else cur+=c;
+    } else {
+      if(c==='"') q=true;
+      else if(c===','){row.push(cur);cur='';}
+      else if(c==='\n'){row.push(cur);rows.push(row);row=[];cur='';}
+      else if(c==='\r'){/*skip*/}
+      else cur+=c;
+    }
+  }
+  if(cur.length||row.length){row.push(cur);rows.push(row);}
+  return rows;
+}
+
+function caParseNumber(v){
+  if(v==null) return 0;
+  v=String(v).trim();
+  if(!v) return 0;
+  // Remove currency symbols and spaces
+  v=v.replace(/R\$/g,'').replace(/\s/g,'');
+  // Detect format: if contains both . and , -> Brazilian (1.234.567,89). 
+  // If only , -> Brazilian decimal. If only . with 3-digit groups after -> thousands. Otherwise dot decimal.
+  var hasComma=v.indexOf(',')>=0, hasDot=v.indexOf('.')>=0;
+  if(hasComma && hasDot){
+    // Brazilian: dots are thousands, comma is decimal
+    v=v.replace(/\./g,'').replace(',','.');
+  } else if(hasComma){
+    v=v.replace(',','.');
+  } else if(hasDot){
+    // Could be either thousands (1.234) or decimal (1.5). Heuristic: if there are multiple dots OR exactly 3 digits after the last dot AND no decimal separator after, treat as thousands.
+    var parts=v.split('.');
+    if(parts.length>2){
+      v=parts.join('');
+    } else if(parts.length===2 && parts[1].length===3){
+      // 158.515 -> ambiguous; in this dataset such patterns are thousands separators (R$ 158.515)
+      v=parts.join('');
+    }
+  }
+  var n=parseFloat(v);
+  return isFinite(n)?n:0;
+}
+
+function caNormCNPJ(s){return String(s||'').replace(/\D/g,'');}
+function caFmtCNPJ(s){
+  var c=caNormCNPJ(s);
+  if(c.length!==14) return s||'';
+  return c.replace(/(\d{2})(\d{3})(\d{3})(\d{4})(\d{2})/,'$1.$2.$3/$4-$5');
+}
+
+function caInitials(name){
+  var w=String(name||'').split(/\s+/).filter(function(x){return x.length>2;});
+  return ((w[0]||' ')[0]+(w[1]||' ')[0]||'?').toUpperCase();
+}
+function caColorFromCNPJ(cnpj){
+  var palette=['#1B5E9E','#7B1D1D','#2D6A4F','#5A3A8C','#B8860B','#0F766E','#9D174D','#1E40AF','#365314','#7C2D12'];
+  var bgs=['#E3EEF9','#FCE8E8','#E8F5EE','#EEE7F8','#FFF4D6','#E0F2EF','#FCE7F3','#DBEAFE','#ECFCCB','#FFE7D6'];
+  var h=0;for(var i=0;i<cnpj.length;i++) h=(h*31+cnpj.charCodeAt(i))>>>0;
+  var idx=h%palette.length;
+  return {fg:palette[idx], bg:bgs[idx]};
+}
+
+function caFetchCSV(){
+  return fetch(CA_SHEET_URL,{cache:'no-store'}).then(function(r){
+    if(!r.ok) throw new Error('HTTP '+r.status);
+    return r.text();
+  }).catch(function(){
+    return fetch(CA_SHEET_URL_FALLBACK,{cache:'no-store'}).then(function(r){return r.text();});
+  });
+}
+
+function caBuildDataFromCSV(csvText){
+  var rows=caParseCSV(csvText);
+  if(!rows.length) return {db:[],demo:[]};
+  var headers=rows[0].map(function(h){return String(h||'').trim();});
+  function col(name){
+    for(var i=0;i<headers.length;i++) if(headers[i].toLowerCase()===name.toLowerCase()) return i;
+    return -1;
+  }
+  // Heuristic mapping (some headers are odd, e.g. parlamentar column may be a person's name)
+  var iId=col('ID da Emenda');
+  var iCnpjFmt=col('CNPJ');
+  var iCnpjN=col('CNPJ_Normalizado');
+  var iNome=col('Razao_Social');
+  var iSeg=col('Segmento');
+  var iCidade=col('Cidade');
+  var iEstado=col('Estado');
+  var iCons=col('Consultor Responsavel'); if(iCons<0) iCons=col('Consultor_Responsavel');
+  var iConsEmail=col('Consultor_Email');
+  // Parlamentar column: header may be a stray name; pick column index 9 (10th) by position as fallback
+  var iParl=col('Parlamentar');
+  if(iParl<0){
+    // Find first header that doesn't match any known one between Consultor_Email and Cargo
+    var iCargo=col('Cargo');
+    if(iCargo>0) iParl=iCargo-1;
+  }
+  var iCargo=col('Cargo');
+  var iEsfera=col('Esfera');
+  var iPartido=col('Partido');
+  var iUFP=col('UF_Parlamentar');
+  var iTipo=col('Tipo_Emenda');
+  var iStatus=col('Status');
+  var iData=col('Data_Indicacao');
+  var iAno=col('Ano_Indicacao');
+  var iMes=col('Mes_Indicacao');
+  var iPer=col('Periodo');
+  var iVI=col('Valor_Indicado');
+  var iVP=col('Valor_Pago');
+  var iSaldo=col('Saldo_a_Receber');
+  var iDataPg=col('Data_Primeiro_Pagamento');
+  var iAnoPg=col('Ano_Pagamento');
+  var iMesPg=col('Mes_Pagamento');
+  var iObs=col('Observacoes');
+
+  var demo=[];
+  var clientsMap={};
+  for(var r=1;r<rows.length;r++){
+    var row=rows[r];
+    if(!row || row.length<3) continue;
+    var cnpjN=caNormCNPJ(row[iCnpjN>=0?iCnpjN:iCnpjFmt]||row[iCnpjFmt]||'');
+    if(!cnpjN || cnpjN.length<11) continue;
+    // pad to 14
+    while(cnpjN.length<14) cnpjN='0'+cnpjN;
+    var nome=(row[iNome]||'').trim();
+    var cons=iCons>=0?(row[iCons]||'').trim():'';
+    var data=iData>=0?(row[iData]||'').trim():'';
+    // Normalize date to YYYY-MM-DD
+    var dataISO=data;
+    var dm=data.match(/^(\d{4})-(\d{2})-(\d{2})/);
+    if(dm) dataISO=dm[1]+'-'+dm[2]+'-'+dm[3];
+    else {
+      var dm2=data.match(/^(\d{1,2})\/(\d{1,2})\/(\d{4})/);
+      if(dm2) dataISO=dm2[3]+'-'+('0'+dm2[2]).slice(-2)+'-'+('0'+dm2[1]).slice(-2);
+    }
+    var ano=parseInt(row[iAno]||'',10);
+    if(!ano && dataISO) ano=parseInt(dataISO.slice(0,4),10);
+    var ind=caParseNumber(row[iVI]);
+    var pago=caParseNumber(row[iVP]);
+    var saldo=caParseNumber(row[iSaldo]);
+    if(!saldo) saldo=ind-pago;
+
+    demo.push({
+      id: String(row[iId]||('R'+r)).trim() || ('R'+r),
+      cnpj: cnpjN,
+      parlamentar: iParl>=0?(row[iParl]||'').trim():'',
+      cargo: iCargo>=0?(row[iCargo]||'').trim():'',
+      esfera: iEsfera>=0?(row[iEsfera]||'').replace(/\s+/g,' ').trim():'',
+      tipo: iTipo>=0?(row[iTipo]||'').replace(/\s+/g,' ').trim():'',
+      status: iStatus>=0?(row[iStatus]||'').trim():'',
+      data: dataISO,
+      ano: ano||0,
+      periodo: iPer>=0?(row[iPer]||'').trim():'',
+      indicado: ind,
+      pago: pago,
+      saldo: saldo,
+      consultor: cons
+    });
+
+    if(!clientsMap[cnpjN]){
+      var col2=caColorFromCNPJ(cnpjN);
+      clientsMap[cnpjN]={
+        login: cnpjN,
+        h: '', // filled later via SHA-256 of first 3 digits
+        perfil: 'CLIENTE',
+        cnpj: cnpjN,
+        nome: nome || ('CNPJ '+caFmtCNPJ(cnpjN)),
+        cnpj_fmt: caFmtCNPJ(cnpjN),
+        consultor: cons,
+        whatsapp: '5511999999999',
+        logo_initials: caInitials(nome),
+        logo_color: col2.fg,
+        logo_bg: col2.bg,
+        logo_url: ''
+      };
+    }
+  }
+
+  var db=[];
+  for(var k in clientsMap){ if(clientsMap.hasOwnProperty(k)) db.push(clientsMap[k]); }
+  return {db:db, demo:demo};
+}
+
+function caHydrateHashes(db){
+  // Use Web Crypto API to compute SHA-256 of first 3 digits of CNPJ
+  if(!window.crypto || !window.crypto.subtle){
+    // Fallback: use the existing CA_SHA() function defined later in the file
+    for(var i=0;i<db.length;i++){
+      try{ db[i].h = CA_SHA(db[i].cnpj.substring(0,3)); }catch(e){ db[i].h=''; }
+    }
+    return Promise.resolve();
+  }
+  var enc=new TextEncoder();
+  var promises=db.map(function(u){
+    var pw=u.cnpj.substring(0,3);
+    return crypto.subtle.digest('SHA-256', enc.encode(pw)).then(function(buf){
+      var arr=Array.from(new Uint8Array(buf));
+      u.h=arr.map(function(b){return ('00'+b.toString(16)).slice(-2);}).join('');
+    });
+  });
+  return Promise.all(promises);
+}
+
+function caShowLoadError(msg){
+  var err=document.getElementById('ca-err'), errT=document.getElementById('ca-errt');
+  if(errT) errT.textContent='Falha ao carregar dados: '+msg;
+  if(err) err.classList.add('ca-show');
+}
+
+function caLoadDynamicData(){
+  return caFetchCSV().then(function(text){
+    var built=caBuildDataFromCSV(text);
+    // Replace global arrays in-place to keep references
+    CA_DB.length=0; for(var i=0;i<built.db.length;i++) CA_DB.push(built.db[i]);
+    CA_DEMO.length=0; for(var j=0;j<built.demo.length;j++) CA_DEMO.push(built.demo[j]);
+    return caHydrateHashes(CA_DB).then(function(){
+      CA_READY=true;
+      var btn=document.getElementById('ca-lbtn');
+      if(btn){btn.classList.remove('ca-load');btn.disabled=false;}
+    });
+  }).catch(function(e){
+    console.error('[GCA] Falha ao carregar Sheets:',e);
+    caShowLoadError(e.message||'erro de rede');
+  });
+}
+
+
 document.addEventListener('DOMContentLoaded',function(){
   initTheme();
-
-  // Auto login from session
-  var savedUser=loadSession();
-  if(savedUser){
-    loginOk(savedUser);
-  } else {
-    var uu=el('ca-uu');if(uu)uu.focus();
-  }
+  // Show loading on login button until CSV+hashes ready
+  var lbtn0=document.getElementById('ca-lbtn');
+  if(lbtn0) lbtn0.classList.add('ca-load');
+  caLoadDynamicData().then(function(){
+    // Auto login from session (after data loaded so login can validate)
+    var savedUser=loadSession();
+    if(savedUser){
+      // Re-resolve user from refreshed CA_DB
+      var fresh=null;
+      for(var i=0;i<CA_DB.length;i++){if(CA_DB[i].login===savedUser.login){fresh=CA_DB[i];break;}}
+      if(fresh) loginOk(fresh);
+      else { clearSession(); var uu=document.getElementById('ca-uu');if(uu)uu.focus(); }
+    } else {
+      var uu=document.getElementById('ca-uu');if(uu)uu.focus();
+    }
+  });
 
   // iOS PWA banner
   var isIos=/iphone|ipad|ipod/i.test(navigator.userAgent);
